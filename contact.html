@@ -104,7 +104,8 @@ https://www.tooplate.com/view/2127-little-fashion
                     <div class="col-lg-6 col-12">
                         <h2 class="mb-4">Let's <span>begin</span></h2>
 
-                        <form class="contact-form me-lg-5 pe-lg-3" role="form">
+                        <form class="contact-form me-lg-5 pe-lg-3" role="form"
+                            action="https://formsubmit.co/findacappella@gmail.com" method="POST">
 
                             <div class="form-floating">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Full name"
@@ -122,16 +123,22 @@ https://www.tooplate.com/view/2127-little-fashion
 
                             <div class="form-floating my-4">
                                 <input type="subject" name="subject" id="subject" class="form-control"
-                                    placeholder="Subject" required>
+                                    placeholder="Subject">
 
                                 <label for="subject">Subject</label>
                             </div>
 
                             <div class="form-floating mb-4">
-                                <textarea id="message" name="message" class="form-control"
-                                    placeholder="Leave a comment here" required style="height: 160px"></textarea>
+                                <textarea name="message" id="message" class="form-control"
+                                    placeholder="Leave a comment here" style="height: 160px"></textarea>
 
                                 <label for="message">Tell us about the project</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+                                Subscribe to our mailing list
+                                <label for="subscribe"></label>
                             </div>
 
                             <div class="col-lg-5 col-6">
