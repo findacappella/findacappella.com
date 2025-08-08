@@ -1,0 +1,54 @@
+
+/* custom.css - SEO & design refresh overrides */
+:root{
+  --base-font-size:16px;
+  --heading-font-weight:700;
+  --body-font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Improve base typography */
+body{
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Hero tweaks */
+.slick-title{
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: var(--heading-font-weight);
+  letter-spacing: 0.5px;
+}
+
+/* Lead paragraph */
+.lead{
+  font-size: 1.05rem;
+  max-width: 46ch;
+}
+
+/* Buttons polish */
+.btn{
+  border-radius: 12px;
+  padding: 0.6rem 1.1rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08);}
+
+/* Card spacing and images */
+.card img{ max-width:100%; height:auto; display:block; border-radius:8px;}
+
+/* Footer*/
+footer{ font-size:0.95rem; padding:2rem 0; background:#0f1720; color:#d1d5db;}
+
+/* Mobile improvements */
+@media (max-width: 767px){
+  .navbar { padding: .6rem 1rem; }
+  .slick-title{ font-size: 28px; }
+  .lead{ font-size: 1rem; }
+  .container{ padding-left: 1rem; padding-right:1rem; }
+  .slick-bottom{ padding-bottom: 2rem; }
+}
+
+/* Accessibility-friendly focus outlines */
+a:focus, button:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 3px; }
