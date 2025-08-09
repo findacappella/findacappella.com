@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Browse a directory of Mandarin and Bay Area a cappella groups — contact info, photos, and short descriptions.">
+    <meta name="description" content="Explore CMCA groups: Sudo Chorus, Find A Cappella, and the Mandarin A Cappella Workshop — descriptions, videos, and how to join.">
+    <meta name="author" content="Chinese Music and Culture Association (CMCA)">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>CMCA - Groups Page</title>
+    <title>Groups - CMCA</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,21 +33,21 @@ https://www.tooplate.com/view/2127-little-fashion
     <link rel="canonical" href="https://findacappella.com/groups.html">
 
     
-    <meta property="og:title" content="CMCA - Groups Page">
-    <meta property="og:description" content="Browse a directory of Mandarin and Bay Area a cappella groups — contact info, photos, and short descriptions.">
+    <meta property="og:title" content="Groups - CMCA">
+    <meta property="og:description" content="CMCA runs Sudo Chorus, Find A Cappella, and a monthly Mandarin A Cappella Workshop. Watch performances and get involved.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://findacappella.com/groups.html">
     <meta property="og:image" content="https://findacappella.com/images/Logo-2022.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CMCA - Groups Page">
-    <meta name="twitter:description" content="Browse a directory of Mandarin and Bay Area a cappella groups — contact info, photos, and short descriptions.">
+    <meta name="twitter:title" content="Groups - CMCA">
+    <meta name="twitter:description" content="CMCA runs Sudo Chorus, Find A Cappella, and a monthly Mandarin A Cappella Workshop. Watch performances and get involved.">
 
     <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <section class="preloader">
+    <section class="preloader" aria-label="Loading">
         <div class="spinner">
             <span class="sk-inner-circle"></span>
         </div>
@@ -61,10 +59,10 @@ https://www.tooplate.com/view/2127-little-fashion
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" role="img" aria-label="Menu"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
                     <strong><span>拾果</span> CMCA</strong>
                 </a>
 
@@ -79,7 +77,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="groups.html">Groups</a>
+                            <a class="nav-link active" href="groups.html" aria-current="page">Groups</a>
                         </li>
 
                         <li class="nav-item">
@@ -107,6 +105,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             <span class="d-block text-primary">Our</span>
                             <span class="d-block text-dark">Groups</span>
                         </h1>
+                        <p class="text-muted mt-3">Programs that welcome beginners and experienced performers alike.</p>
                     </div>
                 </div>
             </div>
@@ -114,63 +113,69 @@ https://www.tooplate.com/view/2127-little-fashion
 
         <section class="products section-padding">
             <div class="container">
-                <div class="row">
+                <div class="row gy-5">
 
                     <div class="col-12">
-                        <h2 class="mb-5">Sudo Chorus</h2>
+                        <h2 class="mb-3">Sudo Chorus</h2>
+                        <p class="text-muted">A community chorus (also known as Sudo Choir) made up of passionate amateur and semi‑professional singers. The group rehearses weekly and performs multiple times a year across genres—pop, musical theater, classical, and folk.</p>
                     </div>
 
-
-                    <div class="col-lg-4 col-12 mb-3">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/dMcbWs6qmR8?si=fY9MUJjHKb4RDt89"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="col-lg-6 col-12 mb-3">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/dMcbWs6qmR8?si=fY9MUJjHKb4RDt89" title="Sudo Chorus performance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
 
-                    <div class="mt-2 mt-lg-auto">
-                        <a href="about.html" class="custom-link mb-2">
-                            Learn more about Sudo Chorus
-                            <i class="bi-arrow-right ms-2"></i>
-                        </a>
+                    <div class="col-lg-6 col-12 d-flex align-items-center">
+                        <div>
+                            <p>Interested in singing with Sudo Chorus or inviting us to perform?</p>
+                            <a href="contact.html" class="custom-link mb-2">
+                                Contact us about Sudo Chorus
+                                <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="col-12">
-                        <h2 class="mb-5">Find A Cappella</h2>
+                    <div class="col-12 mt-5">
+                        <h2 class="mb-3">Find A Cappella</h2>
+                        <p class="text-muted">A semi‑professional a cappella group with fixed members. We rehearse weekly and hold major concerts annually—performing pop, musical theater, jazz, folk, and sacred music, all voice‑only.</p>
                     </div>
 
-                    <div class="col-lg-4 col-12 mb-3">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/hZueapMMnOQ?si=GAos-z6qKffs1dic"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="col-lg-6 col-12 mb-3">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/hZueapMMnOQ?si=GAos-z6qKffs1dic" title="Find A Cappella performance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
 
-                    <div class="mt-2 mt-lg-auto">
-                        <a href="about.html" class="custom-link mb-2">
-                            Learn more about Find A Cappella
-                            <i class="bi-arrow-right ms-2"></i>
-                        </a>
+                    <div class="col-lg-6 col-12 d-flex align-items-center">
+                        <div>
+                            <p>Audition interest or collaboration inquiries are welcome.</p>
+                            <a href="contact.html" class="custom-link mb-2">
+                                Contact us about Find A Cappella
+                                <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="col-12">
-                        <h2 class="mb-5">Mandarin A Cappella Workshop</h2>
-                    </div>
-                    <div class="col-lg-4 col-12 mb-3">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/H1eaoFozwU8?si=ATbpRniwISU7mCWb"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="col-12 mt-5">
+                        <h2 class="mb-3">Mandarin A Cappella Workshop</h2>
+                        <p class="text-muted">A welcoming, drop‑in monthly workshop for anyone interested in Mandarin‑language a cappella—no prior experience required. Learn vocal techniques, blend, and harmony in a relaxed community setting.</p>
                     </div>
 
-                    <div class="mt-2 mt-lg-auto">
-                        <a href="about.html" class="custom-link mb-2">
-                            Learn more about Mandarin A Cappella Workshop
-                            <i class="bi-arrow-right ms-2"></i>
-                        </a>
+                    <div class="col-lg-6 col-12 mb-3">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/H1eaoFozwU8?si=ATbpRniwISU7mCWb" title="Mandarin A Cappella Workshop highlights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 d-flex align-items-center">
+                        <div>
+                            <p>Everyone is welcome. Reach out for the next session date.</p>
+                            <a href="contact.html" class="custom-link mb-2">
+                                Ask about the next workshop
+                                <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -188,18 +193,18 @@ https://www.tooplate.com/view/2127-little-fashion
                     <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
                     <br>
                     <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
-                            target="_blank">Tooplate</a></p>
+                            target="_blank" rel="noopener">Tooplate</a></p>
                 </div>
 
                 <div class="col-lg-5 col-8">
                     <h5 class="text-white mb-3">Sitemap</h5>
 
-                    <ul class="footer-menu d-flex flex-wrap">
+                    <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
                         <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
 
                         <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+                        <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
 
                         <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
 
@@ -212,16 +217,16 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="col-lg-3 col-4">
                     <h5 class="text-white mb-3">Social</h5>
 
-                    <ul class="social-icon">
+                    <ul class="social-icon" aria-label="Social links">
 
                         <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
-                                class="social-icon-link bi-youtube"></a>
+                                class="social-icon-link bi-youtube" aria-label="YouTube"></a>
                         </li>
 
-                        <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope"></a></li>
+                        <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
 
                         <li><a href="https://www.instagram.com/find_a_cappella"
-                                class="social-icon-link bi-instagram"></a></li>
+                                class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
                     </ul>
                 </div>
 

@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact CMCA — get in touch to join, collaborate, or book performances.">
+    <meta name="description" content="Contact CMCA to join a group, collaborate, book a performance, or ask about workshops and donations.">
+    <meta name="author" content="Chinese Music and Culture Association (CMCA)">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>CMCA - Contact Page</title>
+    <title>Contact - CMCA</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,21 +34,21 @@ https://www.tooplate.com/view/2127-little-fashion
     <link rel="canonical" href="https://findacappella.com/contact.html">
 
     
-    <meta property="og:title" content="CMCA - Contact Page">
-    <meta property="og:description" content="Contact CMCA — get in touch to join, collaborate, or book performances.">
+    <meta property="og:title" content="Contact - CMCA">
+    <meta property="og:description" content="Reach CMCA for membership, workshops, collaborations, or donations.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://findacappella.com/contact.html">
     <meta property="og:image" content="https://findacappella.com/images/Logo-2022.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CMCA - Contact Page">
-    <meta name="twitter:description" content="Contact CMCA — get in touch to join, collaborate, or book performances.">
+    <meta name="twitter:title" content="Contact - CMCA">
+    <meta name="twitter:description" content="Reach CMCA for membership, workshops, collaborations, or donations.">
 
     <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <section class="preloader">
+    <section class="preloader" aria-label="Loading">
         <div class="spinner">
             <span class="sk-inner-circle"></span>
         </div>
@@ -62,10 +60,10 @@ https://www.tooplate.com/view/2127-little-fashion
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" role="img" aria-label="Menu"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
                     <strong><span>拾果</span> CMCA</strong>
                 </a>
 
@@ -88,7 +86,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Contact</a>
+                            <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
                         </li>
 
                         <li class="nav-item">
@@ -106,14 +104,14 @@ https://www.tooplate.com/view/2127-little-fashion
                     <div class="col-lg-10 col-12 header-info">
                         <h1>
                             <span class="d-block text-primary">Say hello to us</span>
-                            <span class="d-block text-dark">love to hear you</span>
+                            <span class="d-block text-dark">We’d love to hear from you</span>
                         </h1>
                     </div>
                 </div>
             </div>
 
             <img src="images/header/positive-european-woman-has-break-after-work.jpg" class="header-image img-fluid"
-                alt="positive european woman has break after work">
+                alt="Smiling person taking a break at work">
         </header>
 
         <section class="contact section-padding">
@@ -126,39 +124,44 @@ https://www.tooplate.com/view/2127-little-fashion
                         <form class="contact-form me-lg-5 pe-lg-3" role="form"
                             action="https://formsubmit.co/findacappella@gmail.com" method="POST">
 
+                            <input type="hidden" name="_subject" value="New message from CMCA website">
+                            <input type="hidden" name="_captcha" value="true">
+
                             <div class="form-floating">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Full name"
-                                    required>
+                                    required aria-required="true">
 
                                 <label for="name">Full name</label>
                             </div>
 
                             <div class="form-floating my-4">
                                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                    placeholder="Email address" required>
+                                    placeholder="Email address" required aria-required="true">
 
                                 <label for="email">Email address</label>
                             </div>
 
                             <div class="form-floating my-4">
-                                <input type="subject" name="subject" id="subject" class="form-control"
-                                    placeholder="Subject">
+                                <input type="text" name="subject" id="subject" class="form-control"
+                                    placeholder="Subject" aria-label="Subject">
 
                                 <label for="subject">Subject</label>
                             </div>
 
                             <div class="form-floating mb-4">
                                 <textarea name="message" id="message" class="form-control"
-                                    placeholder="Leave a comment here" style="height: 160px"></textarea>
+                                    placeholder="Leave a comment here" style="height: 160px" aria-label="Message"></textarea>
 
                                 <label for="message">Comment</label>
                             </div>
 
                             <div class="form-floating mb-4">
-                                <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+                                <input type="checkbox" name="subscribe" id="subscribe" value="yes" aria-label="Subscribe to our mailing list">
                                 Subscribe to our mailing list
                                 <label for="subscribe"></label>
                             </div>
+
+                            <p class="small text-muted mb-3">By submitting this form, you consent to us contacting you about your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
 
                             <div class="col-lg-5 col-6">
                                 <button type="submit" class="form-control">Send</button>
@@ -173,7 +176,7 @@ https://www.tooplate.com/view/2127-little-fashion
 
                                 <a href="mailto:operations.cmca@gmail.com" class="custom-link">
                                     operations.cmca@gmail.com
-                                    <i class="bi-arrow-right ms-2"></i>
+                                    <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
                                 </a>
                             </div>
 
@@ -182,34 +185,42 @@ https://www.tooplate.com/view/2127-little-fashion
 
                                 <a href="mailto:findacappella@gmail.com" class="custom-link">
                                     findacappella@gmail.com
-                                    <i class="bi-arrow-right ms-2"></i>
+                                    <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
                                 </a>
                             </div>
 
                             <div class="col-6 border-top border-end contact-info">
                                 <h6 class="mb-3">Our Office</h6>
 
-                                <p class="text-muted">Coming soon</p>
+                                <p class="text-muted">San Francisco Bay Area, California, USA</p>
                             </div>
 
                             <div class="col-6 border-top contact-info">
                                 <h6 class="mb-3">Our Socials</h6>
 
-                                <ul class="social-icon">
+                                <ul class="social-icon" aria-label="Social links">
 
                                     <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
-                                            class="social-icon-link bi-youtube"></a></li>
+                                            class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
 
                                     <li><a href="mailto:operations.cmca@gmail.com"
-                                            class="social-icon-link bi-envelope"></a></li>
+                                            class="social-icon-link bi-envelope" aria-label="Email"></a></li>
 
                                     <li><a href="https://www.instagram.com/find_a_cappella"
-                                            class="social-icon-link bi-instagram"></a></li>
+                                            class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="row mt-5" id="privacy">
+                    <div class="col-lg-10 col-12">
+                        <h3 class="mb-3">Privacy Policy</h3>
+                        <p class="text-muted">We collect the information you submit via this form (name, email, message, and optional subscription preference) to respond to your inquiry and, if you opt in, to send CMCA updates. We do not sell your data. We may use trusted third‑party services (e.g., email providers) to process messages securely. To update or delete your information, contact <a href="mailto:operations.cmca@gmail.com">operations.cmca@gmail.com</a>.</p>
+                        <p class="text-muted mb-0">CMCA is a 501(c)(3) nonprofit organization. This website does not sell or promote restricted goods or services.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -224,18 +235,18 @@ https://www.tooplate.com/view/2127-little-fashion
                     <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
                     <br>
                     <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
-                            target="_blank">Tooplate</a></p>
+                            target="_blank" rel="noopener">Tooplate</a></p>
                 </div>
 
                 <div class="col-lg-5 col-8">
                     <h5 class="text-white mb-3">Sitemap</h5>
 
-                    <ul class="footer-menu d-flex flex-wrap">
+                    <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
                         <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
 
                         <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+                        <li class="footer-menu-item"><a href="#privacy" class="footer-menu-link">Privacy policy</a></li>
 
                         <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
 
@@ -248,16 +259,16 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="col-lg-3 col-4">
                     <h5 class="text-white mb-3">Social</h5>
 
-                    <ul class="social-icon">
+                    <ul class="social-icon" aria-label="Social links">
 
                         <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
-                                class="social-icon-link bi-youtube"></a>
+                                class="social-icon-link bi-youtube" aria-label="YouTube"></a>
                         </li>
 
-                        <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope"></a></li>
+                        <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
 
                         <li><a href="https://www.instagram.com/find_a_cappella"
-                                class="social-icon-link bi-instagram"></a></li>
+                                class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
                     </ul>
                 </div>
 
