@@ -11,29 +11,14 @@
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/slick.css" />
-
     <link href="css/tooplate-little-fashion.css" rel="stylesheet">
-
-    <!--
-
-Tooplate 2127 Little Fashion
-
-https://www.tooplate.com/view/2127-little-fashion
-
--->
 
     <link rel="canonical" href="https://findacappella.com/contact.html">
 
-    
     <meta property="og:title" content="Contact - CMCA">
     <meta property="og:description" content="Reach CMCA for membership, workshops, collaborations, or donations.">
     <meta property="og:type" content="website">
@@ -44,9 +29,54 @@ https://www.tooplate.com/view/2127-little-fashion
     <meta name="twitter:description" content="Reach CMCA for membership, workshops, collaborations, or donations.">
 
     <link href="css/custom.css" rel="stylesheet">
+
+    <style>
+        /* Subtle enhancements aligned with existing design */
+        .action-card {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            width: 100%;
+            padding: .85rem 1rem;
+            border-radius: .75rem;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: #fff;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+        .action-card:hover, .action-card:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.06);
+            border-color: rgba(0,0,0,.15);
+            outline: none;
+        }
+        .card-hover {
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .card-hover:hover, .card-hover:focus-within {
+            transform: translateY(-4px);
+            box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .08);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+        .fade-up.revealed {
+            opacity: 1;
+            transform: none;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .action-card, .card-hover, .fade-up {
+                transition: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
 
     <section class="preloader" aria-label="Loading">
         <div class="spinner">
@@ -54,13 +84,13 @@ https://www.tooplate.com/view/2127-little-fashion
         </div>
     </section>
 
-    <main>
+    <main id="main">
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" role="img" aria-label="Menu"></span>
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
                 </button>
 
                 <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
@@ -109,59 +139,88 @@ https://www.tooplate.com/view/2127-little-fashion
                     </div>
                 </div>
             </div>
-
-            <img src="images/header/positive-european-woman-has-break-after-work.jpg" class="header-image img-fluid"
-                alt="Smiling person taking a break at work">
         </header>
 
         <section class="contact section-padding">
             <div class="container">
-                <div class="row">
+                <!-- Quick actions turn lists into tappable cards -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="h4 mb-3">How can we help?</h2>
+                    </div>
+                    <div class="col-6 col-md mb-3">
+                        <button type="button" class="action-card fade-up" data-subject="Sudo Chorus — I'd like to sing">
+                            <i class="bi-people-fill text-primary fs-5" aria-hidden="true"></i>
+                            <span class="text-start">Join Sudo Chorus</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md mb-3">
+                        <button type="button" class="action-card fade-up" data-subject="Find A Cappella — Audition inquiry">
+                            <i class="bi-mic-fill text-primary fs-5" aria-hidden="true"></i>
+                            <span class="text-start">Audition for Find A Cappella</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md mb-3">
+                        <button type="button" class="action-card fade-up" data-subject="Workshop — Next session date">
+                            <i class="bi-music-note-beamed text-primary fs-5" aria-hidden="true"></i>
+                            <span class="text-start">Workshop info</span>
+                        </button>
+                    </div>
+                    <div class="col-6 col-md mb-3">
+                        <button type="button" class="action-card fade-up" data-subject="Booking — Performance request">
+                            <i class="bi-calendar-event text-primary fs-5" aria-hidden="true"></i>
+                            <span class="text-start">Book a performance</span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <button type="button" class="action-card fade-up" data-subject="General — Hello CMCA">
+                            <i class="bi-chat-dots text-primary fs-5" aria-hidden="true"></i>
+                            <span class="text-start">General inquiry</span>
+                        </button>
+                    </div>
+                </div>
 
+                <div class="row">
                     <div class="col-lg-6 col-12">
                         <h2 class="mb-4">Let's <span>begin</span></h2>
 
-                        <form class="contact-form me-lg-5 pe-lg-3" role="form"
-                            action="https://formsubmit.co/findacappella@gmail.com" method="POST">
-
+                        <form class="contact-form me-lg-5 pe-lg-3 fade-up" role="form"
+                            action="https://formsubmit.co/operations.cmca@gmail.com" method="POST">
                             <input type="hidden" name="_subject" value="New message from CMCA website">
                             <input type="hidden" name="_captcha" value="true">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to CMCA! We have received your message and will get back to you as soon as possible.">
 
                             <div class="form-floating">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Full name"
-                                    required aria-required="true">
-
+                                    required aria-required="true" autocomplete="name">
                                 <label for="name">Full name</label>
                             </div>
 
                             <div class="form-floating my-4">
                                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                    placeholder="Email address" required aria-required="true">
-
+                                    placeholder="Email address" required aria-required="true" autocomplete="email" inputmode="email">
                                 <label for="email">Email address</label>
                             </div>
 
                             <div class="form-floating my-4">
                                 <input type="text" name="subject" id="subject" class="form-control"
-                                    placeholder="Subject" aria-label="Subject">
-
+                                    placeholder="Subject" aria-label="Subject" autocomplete="on">
                                 <label for="subject">Subject</label>
                             </div>
 
                             <div class="form-floating mb-4">
                                 <textarea name="message" id="message" class="form-control"
                                     placeholder="Leave a comment here" style="height: 160px" aria-label="Message"></textarea>
-
                                 <label for="message">Comment</label>
                             </div>
 
-                            <div class="form-floating mb-4">
-                                <input type="checkbox" name="subscribe" id="subscribe" value="yes" aria-label="Subscribe to our mailing list">
-                                Subscribe to our mailing list
-                                <label for="subscribe"></label>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" name="subscribe" id="subscribe" value="yes">
+                                <label class="form-check-label" for="subscribe">Subscribe to our mailing list</label>
                             </div>
 
-                            <p class="small text-muted mb-3">By submitting this form, you consent to us contacting you about your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
+                            <p class="small text-muted mb-3">We typically reply within 2–3 business days. By submitting this form, you consent to us contacting you about your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
 
                             <div class="col-lg-5 col-6">
                                 <button type="submit" class="form-control">Send</button>
@@ -169,57 +228,93 @@ https://www.tooplate.com/view/2127-little-fashion
                         </form>
                     </div>
 
-                    <div class="col-lg-6 col-12 mt-5 ms-auto">
-                        <div class="row">
-                            <div class="col-6 border-end contact-info">
-                                <h6 class="mb-3">New Business</h6>
-
-                                <a href="mailto:operations.cmca@gmail.com" class="custom-link">
-                                    operations.cmca@gmail.com
-                                    <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
-                                </a>
+                    <div class="col-lg-6 col-12 mt-5 mt-lg-0 ms-auto">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="card border-0 shadow-sm card-hover h-100 fade-up">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-briefcase fs-4 text-primary" aria-hidden="true"></i>
+                                            <h6 class="ms-2 mb-0">New Business</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2">Partnerships, donations, general ops</p>
+                                        <a href="mailto:operations.cmca@gmail.com" class="custom-link">
+                                            operations.cmca@gmail.com
+                                            <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-6 contact-info">
-                                <h6 class="mb-3">Main Contact</h6>
-
-                                <a href="mailto:findacappella@gmail.com" class="custom-link">
-                                    findacappella@gmail.com
-                                    <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
-                                </a>
+                            <div class="col-sm-6">
+                                <div class="card border-0 shadow-sm card-hover h-100 fade-up">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-person-lines-fill fs-4 text-primary" aria-hidden="true"></i>
+                                            <h6 class="ms-2 mb-0">Main Contact</h6>
+                                        </div>
+                                        <p class="text-muted small mb-2">Group memberships and bookings</p>
+                                        <a href="mailto:findacappella@gmail.com" class="custom-link">
+                                            findacappella@gmail.com
+                                            <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-6 border-top border-end contact-info">
-                                <h6 class="mb-3">Our Office</h6>
-
-                                <p class="text-muted">San Francisco Bay Area, California, USA</p>
+                            <div class="col-sm-6">
+                                <div class="card border-0 shadow-sm card-hover h-100 fade-up">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-geo-alt fs-4 text-primary" aria-hidden="true"></i>
+                                            <h6 class="ms-2 mb-0">Our Office</h6>
+                                        </div>
+                                        <p class="text-muted mb-0">San Francisco Bay Area, California, USA</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-6 border-top contact-info">
-                                <h6 class="mb-3">Our Socials</h6>
-
-                                <ul class="social-icon" aria-label="Social links">
-
-                                    <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
-                                            class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
-
-                                    <li><a href="mailto:operations.cmca@gmail.com"
-                                            class="social-icon-link bi-envelope" aria-label="Email"></a></li>
-
-                                    <li><a href="https://www.instagram.com/find_a_cappella"
-                                            class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
-                                </ul>
+                            <div class="col-sm-6">
+                                <div class="card border-0 shadow-sm card-hover h-100 fade-up">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi-share fs-4 text-primary" aria-hidden="true"></i>
+                                            <h6 class="ms-2 mb-0">Our Socials</h6>
+                                        </div>
+                                        <ul class="social-icon" aria-label="Social links">
+                                            <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
+                                                    class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
+                                            <li><a href="mailto:operations.cmca@gmail.com"
+                                                    class="social-icon-link bi-envelope" aria-label="Email"></a></li>
+                                            <li><a href="https://www.instagram.com/find_a_cappella"
+                                                    class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
+                <!-- Privacy: collapsible to reduce long blocks of text -->
                 <div class="row mt-5" id="privacy">
                     <div class="col-lg-10 col-12">
-                        <h3 class="mb-3">Privacy Policy</h3>
-                        <p class="text-muted">We collect the information you submit via this form (name, email, message, and optional subscription preference) to respond to your inquiry and, if you opt in, to send CMCA updates. We do not sell your data. We may use trusted third‑party services (e.g., email providers) to process messages securely. To update or delete your information, contact <a href="mailto:operations.cmca@gmail.com">operations.cmca@gmail.com</a>.</p>
-                        <p class="text-muted mb-0">CMCA is a 501(c)(3) nonprofit organization. This website does not sell or promote restricted goods or services.</p>
+                        <div class="accordion fade-up" id="privacyAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="privacyHeading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#privacyCollapse" aria-expanded="false" aria-controls="privacyCollapse">
+                                        Privacy Policy
+                                    </button>
+                                </h2>
+                                <div id="privacyCollapse" class="accordion-collapse collapse" aria-labelledby="privacyHeading" data-bs-parent="#privacyAccordion">
+                                    <div class="accordion-body">
+                                        <p class="text-muted">We collect the information you submit via this form (name, email, message, and optional subscription preference) to respond to your inquiry and, if you opt in, to send CMCA updates. We do not sell your data. We may use trusted third‑party services (e.g., email providers) to process messages securely. To update or delete your information, contact <a href="mailto:operations.cmca@gmail.com">operations.cmca@gmail.com</a>.</p>
+                                        <p class="text-muted mb-0">CMCA is a 501(c)(3) nonprofit organization. This website does not sell or promote restricted goods or services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,15 +338,10 @@ https://www.tooplate.com/view/2127-little-fashion
 
                     <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
                         <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
-
                         <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
-
                         <li class="footer-menu-item"><a href="#privacy" class="footer-menu-link">Privacy policy</a></li>
-
                         <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-
                         <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
-
                         <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
                     </ul>
                 </div>
@@ -260,13 +350,10 @@ https://www.tooplate.com/view/2127-little-fashion
                     <h5 class="text-white mb-3">Social</h5>
 
                     <ul class="social-icon" aria-label="Social links">
-
                         <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
                                 class="social-icon-link bi-youtube" aria-label="YouTube"></a>
                         </li>
-
                         <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
-
                         <li><a href="https://www.instagram.com/find_a_cappella"
                                 class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
                     </ul>
@@ -281,8 +368,42 @@ https://www.tooplate.com/view/2127-little-fashion
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Headroom.js"></script>
     <script src="js/jQuery.headroom.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        // Prefill subject from URL param and quick-action cards; subtle reveal on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const params = new URLSearchParams(window.location.search);
+            const s = params.get('subject');
+            if (s && subjectInput) {
+                subjectInput.value = s;
+                messageInput && messageInput.focus();
+            }
+            document.querySelectorAll('[data-subject]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const subj = btn.getAttribute('data-subject');
+                    if (subjectInput) subjectInput.value = subj;
+                    document.getElementById('name')?.focus();
+                    document.querySelector('.contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!prefersReduced) {
+                const els = document.querySelectorAll('.fade-up');
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('revealed');
+                            io.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.08 });
+                els.forEach(el => io.observe(el));
+            }
+        });
+    </script>
 </body>
 
 </html>

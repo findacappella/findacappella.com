@@ -11,28 +11,16 @@
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/slick.css" />
-
+    <link rel="stylesheet" href="css/slick.css">
     <link href="css/tooplate-little-fashion.css" rel="stylesheet">
-    <!--
-
-Tooplate 2127 Little Fashion
-
-https://www.tooplate.com/view/2127-little-fashion
-
--->
 
     <link rel="canonical" href="https://findacappella.com/index.html">
 
-    
     <meta property="og:title" content="Home - CMCA">
     <meta property="og:description" content="CMCA is a nonprofit that supports choirs, a cappella, workshops, youth arts, and community cultural events across the Bay Area and beyond.">
     <meta property="og:type" content="website">
@@ -62,6 +50,7 @@ https://www.tooplate.com/view/2127-little-fashion
 </head>
 
 <body>
+    <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
 
     <section class="preloader" aria-label="Loading">
         <div class="spinner">
@@ -69,13 +58,13 @@ https://www.tooplate.com/view/2127-little-fashion
         </div>
     </section>
 
-    <main>
+    <main id="main">
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" role="img" aria-label="Menu"></span>
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
                 </button>
 
                 <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
@@ -120,10 +109,8 @@ https://www.tooplate.com/view/2127-little-fashion
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 col-10">
-                                <h1 class="slick-title"></h1>
-
-                                <p class="lead text-white mt-lg-3 mb-lg-5">Everyone is welcome at our Mandarin A Cappella Workshop!</p>
-
+                                <h1 class="slick-title">Mandarin A Cappella Workshop</h1>
+                                <p class="lead text-white mt-lg-3 mb-lg-5">Everyone is welcome—no experience required.</p>
                                 <!-- <a href="https://event.hellotaro.com/e/2025_ca_find_a_capella_0511" class="btn custom-btn">RSVP</a> -->
                             </div>
                         </div>
@@ -139,9 +126,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         <div class="row">
                             <div class="col-lg-6 col-10">
                                 <h1 class="slick-title">Stanford Memorial Church</h1>
-
-                                <p class="lead text-white mt-lg-3 mb-lg-5">7/20/2025</p>
-
+                                <p class="lead text-white mt-lg-3 mb-lg-5">July 20, 2025</p>
                             </div>
                         </div>
                     </div>
@@ -156,9 +141,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         <div class="row">
                             <div class="col-lg-6 col-10">
                                 <h1 class="slick-title">CMCA</h1>
-
                                 <p class="lead text-white mt-lg-3 mb-lg-5">We build community through music, education, and cultural exchange.</p>
-
                                 <a href="contact.html" class="btn custom-btn">Join us</a>
                             </div>
                         </div>
@@ -174,9 +157,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         <div class="row">
                             <div class="col-lg-6 col-10">
                                 <h1 class="slick-title">Music</h1>
-
                                 <p class="lead text-white mt-lg-3 mb-lg-5">From pop and musical theater to jazz, folk, and sacred music.</p>
-
                                 <a href="groups.html" class="btn custom-btn">See our groups</a>
                             </div>
                         </div>
@@ -206,7 +187,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-about-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about"
-                                    aria-selected="true">What we do</button>
+                                    aria-selected="false">What we do</button>
                             </li>
                         </ul>
                     </div>
@@ -216,16 +197,16 @@ https://www.tooplate.com/view/2127-little-fashion
                             <div class="tab-pane fade show active" id="pills-introduction" role="tabpanel"
                                 aria-labelledby="pills-introduction-tab">
 
-                                <div class="row">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-7 col-12">
+                                        <img src="images/新年音乐会合照.jpg" class="img-fluid rounded" alt="CMCA New Year concert group photo">
+                                    </div>
 
-                                    <div class="col-lg-5 col-12">
-                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                    <div class="col-lg-5 col-12 mt-4 mt-lg-0">
+                                        <div class="d-flex flex-column h-100 ms-lg-4">
                                             <h4 class="mb-3">Welcome to <span>CMCA</span></h4>
-
                                             <p>Chinese Music and Culture Association (CMCA) is a nonprofit based in the San Francisco Bay Area. We foster music, cultural enrichment, and artistic collaboration for singers, musicians, dancers, visual artists, writers, and performers across disciplines.</p>
-
                                             <p>Members come from all walks of life—many are tech professionals who unwind and connect through singing after work.</p>
-
                                             <div class="mt-2 mt-lg-auto">
                                                 <a href="about.html" class="custom-link mb-2">
                                                     Learn more about us
@@ -240,16 +221,16 @@ https://www.tooplate.com/view/2127-little-fashion
                             <div class="tab-pane fade" id="pills-about" role="tabpanel"
                                 aria-labelledby="pills-about-tab">
 
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div class="col-lg-7 col-12">
-                                        <img src="images/新年音乐会合照.jpg" class="img-fluid" alt="CMCA New Year concert group photo">
+                                        <img src="images/Group.jpg" class="img-fluid rounded" alt="CMCA rehearsal and community scene">
                                     </div>
 
-                                    <div class="col-lg-5 col-12">
-                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                    <div class="col-lg-5 col-12 mt-4 mt-lg-0">
+                                        <div class="d-flex flex-column h-100 ms-lg-4">
                                             <h4 class="mb-3">Our <span>Programs</span></h4>
 
-                                            <ul>
+                                            <ul class="mb-3">
                                                 <li><strong>Find A Cappella</strong> — Semi‑professional a cappella group performing annually.</li>
                                                 <li><strong>Sudo Chorus</strong> (also known as Sudo Choir) — Weekly rehearsals; multiple concerts yearly.</li>
                                                 <li><strong>Mandarin A Cappella Workshop</strong> — Monthly, drop‑in community singing open to all.</li>
@@ -274,7 +255,47 @@ https://www.tooplate.com/view/2127-little-fashion
             </div>
         </section>
 
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row text-center gy-4">
+                    <div class="col-12">
+                        <h2 class="mb-4">What we offer</h2>
+                    </div>
 
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 h-100 border rounded-3">
+                            <i class="bi-music-note-beamed fs-1 text-primary" aria-hidden="true"></i>
+                            <h5 class="mt-3">Perform</h5>
+                            <p class="text-muted mb-0">Concerts, festivals, and community stages year‑round.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 h-100 border rounded-3">
+                            <i class="bi-mortarboard fs-1 text-primary" aria-hidden="true"></i>
+                            <h5 class="mt-3">Learn</h5>
+                            <p class="text-muted mb-0">Workshops, masterclasses, and mentorship for all levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 h-100 border rounded-3">
+                            <i class="bi-people fs-1 text-primary" aria-hidden="true"></i>
+                            <h5 class="mt-3">Connect</h5>
+                            <p class="text-muted mb-0">Inclusive programs that welcome beginners and pros.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <div class="p-4 h-100 border rounded-3">
+                            <i class="bi-globe2 fs-1 text-primary" aria-hidden="true"></i>
+                            <h5 class="mt-3">Exchange</h5>
+                            <p class="text-muted mb-0">Cross‑cultural collaborations locally and internationally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -286,8 +307,7 @@ https://www.tooplate.com/view/2127-little-fashion
                     <h4 class="text-white mb-3"><a href="index.html">CMCA</a></h4>
                     <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
                     <br>
-                    <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
-                            target="_blank" rel="noopener">Tooplate</a></p>
+                    <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank" rel="noopener">Tooplate</a></p>
                 </div>
 
                 <div class="col-lg-5 col-8">
@@ -295,15 +315,10 @@ https://www.tooplate.com/view/2127-little-fashion
 
                     <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
                         <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
-
                         <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
-
                         <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
-
                         <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-
                         <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
-
                         <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
                     </ul>
                 </div>
@@ -312,15 +327,9 @@ https://www.tooplate.com/view/2127-little-fashion
                     <h5 class="text-white mb-3">Social</h5>
 
                     <ul class="social-icon" aria-label="Social links">
-
-                        <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg"
-                                class="social-icon-link bi-youtube" aria-label="YouTube"></a>
-                        </li>
-
+                        <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
                         <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
-
-                        <li><a href="https://www.instagram.com/find_a_cappella"
-                                class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
+                        <li><a href="https://www.instagram.com/find_a_cappella" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
                     </ul>
                 </div>
 
