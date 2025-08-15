@@ -1,105 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CMCA Partials</title>
-</head>
-<body>
-  <!-- Reusable partials are stored in template tags for safe cloning -->
+  <head>
+    <meta charset="utf-8" />
+    <title>CMCA Partials</title>
+  </head>
+  <body>
+    <!-- Reusable partials are stored in template tags for safe cloning -->
 
-  <template id="tpl-skip">
-    <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
-  </template>
+    <template id="tpl-skip">
+      <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+    </template>
 
-  <template id="tpl-preloader">
-    <section class="preloader" aria-label="Loading">
-      <div class="spinner">
-        <span class="sk-inner-circle"></span>
-      </div>
-    </section>
-  </template>
-
-  <template id="tpl-navbar">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
-        </button>
-
-        <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
-          <strong><span>拾果</span> CMCA</strong>
-        </a>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="groups.html">Groups</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQs</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="donation.html">Donation</a>
-            </li>
-          </ul>
+    <template id="tpl-preloader">
+      <section class="preloader" aria-label="Loading">
+        <div class="spinner">
+          <span class="sk-inner-circle"></span>
         </div>
-      </div>
-    </nav>
-  </template>
+      </section>
+    </template>
 
-  <template id="tpl-footer">
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
+    <template id="tpl-navbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+          </button>
 
-          <div class="col-lg-3 col-10 me-auto mb-4">
-            <h4 class="text-white mb-3"><a href="index.html">CMCA</a></h4>
-            <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
-            <br>
-            <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank" rel="noopener">Tooplate</a></p>
-          </div>
+          <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
+            <strong><span>拾果</span> CMCA</strong>
+          </a>
 
-          <div class="col-lg-5 col-8">
-            <h5 class="text-white mb-3">Sitemap</h5>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
 
-            <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
-              <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
-              <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
-              <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
-              <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-              <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
-              <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="groups.html">Groups</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQs</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="donation.html">Donation</a>
+              </li>
             </ul>
           </div>
-
-          <div class="col-lg-3 col-4">
-            <h5 class="text-white mb-3">Social</h5>
-
-            <ul class="social-icon" aria-label="Social links">
-              <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
-              <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
-              <li><a href="https://www.instagram.com/find_a_cappella" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
-            </ul>
-          </div>
-
         </div>
-      </div>
-    </footer>
-  </template>
-</body>
+      </nav>
+    </template>
+
+    <template id="tpl-footer">
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-10 me-auto mb-4">
+              <h4 class="text-white mb-3"><a href="index.html">CMCA</a></h4>
+              <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
+              <br />
+              <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank" rel="noopener">Tooplate</a></p>
+            </div>
+
+            <div class="col-lg-5 col-8">
+              <h5 class="text-white mb-3">Sitemap</h5>
+
+              <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
+                <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+                <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
+                <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
+                <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
+                <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
+                <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-4">
+              <h5 class="text-white mb-3">Social</h5>
+
+              <ul class="social-icon" aria-label="Social links">
+                <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
+                <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
+                <li><a href="https://www.instagram.com/find_a_cappella" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </template>
+  </body>
 </html>

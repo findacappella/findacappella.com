@@ -1,397 +1,370 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About CMCA — The Chinese Music and Culture Association fosters music, cultural enrichment, and artistic collaboration through choirs, a cappella, workshops, youth arts, and community events.">
-    <meta name="author" content="Chinese Music and Culture Association (CMCA)">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About CMCA — The Chinese Music and Culture Association fosters music, cultural enrichment, and artistic collaboration through choirs, a cappella, workshops, youth arts, and community events." />
+    <meta name="author" content="Chinese Music and Culture Association (CMCA)" />
 
     <title>About - CMCA</title>
 
     <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/slick.css">
-    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://findacappella.com/about.html">
+    <link rel="canonical" href="https://findacappella.com/about.html" />
 
-    <meta property="og:title" content="About - CMCA">
-    <meta property="og:description" content="Learn about CMCA’s mission, core goals, programs, key initiatives, and impact across the arts community.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://findacappella.com/about.html">
-    <meta property="og:image" content="https://findacappella.com/images/Logo-2022.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About - CMCA">
-    <meta name="twitter:description" content="Learn about CMCA’s mission, core goals, programs, key initiatives, and impact across the arts community.">
+    <meta property="og:title" content="About - CMCA" />
+    <meta property="og:description" content="Learn about CMCA’s mission, core goals, programs, key initiatives, and impact across the arts community." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://findacappella.com/about.html" />
+    <meta property="og:image" content="https://findacappella.com/images/Logo-2022.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About - CMCA" />
+    <meta name="twitter:description" content="Learn about CMCA’s mission, core goals, programs, key initiatives, and impact across the arts community." />
 
-    <link href="css/custom.css" rel="stylesheet">
-    <script type="application/ld+json">{
-      "@context":"https://schema.org",
-      "@type":"NonprofitOrganization",
-      "name":"Chinese Music and Culture Association (CMCA)",
-      "url":"https://findacappella.com/about.html",
-      "logo":"https://findacappella.com/images/Logo-2022.jpeg",
-      "description":"CMCA fosters music, cultural enrichment, and artistic collaboration through choirs, a cappella, workshops, youth arts, and community events.",
-      "email":"operations.cmca@gmail.com",
-      "sameAs":[
-        "https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg",
-        "https://www.instagram.com/find_a_cappella"
-      ]
-    }</script>
+    <link href="css/custom.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NonprofitOrganization",
+        "name": "Chinese Music and Culture Association (CMCA)",
+        "url": "https://findacappella.com/about.html",
+        "logo": "https://findacappella.com/images/Logo-2022.jpeg",
+        "description": "CMCA fosters music, cultural enrichment, and artistic collaboration through choirs, a cappella, workshops, youth arts, and community events.",
+        "email": "operations.cmca@gmail.com",
+        "sameAs": ["https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg", "https://www.instagram.com/find_a_cappella"]
+      }
+    </script>
 
     <style>
-        /* Subtle motion + hover that fit existing style */
-        .card-elevate {
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-        .card-elevate:hover,
-        .card-elevate:focus-within {
-            transform: translateY(-4px);
-            box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.06);
-        }
+      /* Subtle motion + hover that fit existing style */
+      .card-elevate {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card-elevate:hover,
+      .card-elevate:focus-within {
+        transform: translateY(-4px);
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.06);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        pointer-events: none;
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .icon-circle {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bs-light);
+        color: var(--bs-primary);
+      }
+      .feature-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid var(--bs-border-color);
+        border-radius: 999px;
+        font-size: 0.95rem;
+        background-color: #fff;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .card-elevate,
         .reveal {
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity .6s ease, transform .6s ease;
-            pointer-events: none;
+          transition: none;
         }
-        .reveal-visible {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        .icon-circle {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--bs-light);
-            color: var(--bs-primary);
-        }
-        .feature-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: .5rem;
-            padding: .5rem .75rem;
-            border: 1px solid var(--bs-border-color);
-            border-radius: 999px;
-            font-size: .95rem;
-            background-color: #fff;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .card-elevate,
-            .reveal { transition: none; }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div data-include="skip"></div>
 
     <div data-include="preloader"></div>
 
     <main id="main">
-        <div data-include="navbar"></div>
+      <div data-include="navbar"></div>
 
-        <header class="site-header section-padding-img site-header-image">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12 header-info">
-                        <h1>
-                            <span class="d-block text-primary">拾果</span>
-                            <span class="d-block text-dark">CMCA</span>
-                        </h1>
-                        <p class="text-muted mt-3">Chinese Music and Culture Association</p>
-                    </div>
-                </div>
+      <header class="site-header section-padding-img site-header-image">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12 header-info">
+              <h1>
+                <span class="d-block text-primary">拾果</span>
+                <span class="d-block text-dark">CMCA</span>
+              </h1>
+              <p class="text-muted mt-3">Chinese Music and Culture Association</p>
             </div>
+          </div>
+        </div>
 
-            <img src="images/Barbara Ann.jpg" class="header-image img-fluid" alt="CMCA performance photo" loading="lazy">
-        </header>
+        <img src="images/Barbara Ann.jpg" class="header-image img-fluid" alt="CMCA performance photo" loading="lazy" />
+      </header>
 
-        <section class="about section-padding">
-            <div class="container">
-                <div class="row">
+      <section class="about section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-12">
+              <div class="reveal">
+                <ul class="nav nav-pills gap-2 mb-4" id="aboutTabs" role="tablist" aria-label="About navigation">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission-pane" type="button" role="tab" aria-controls="mission-pane" aria-selected="true">Mission</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="programs-tab" data-bs-toggle="tab" data-bs-target="#programs-pane" type="button" role="tab" aria-controls="programs-pane" aria-selected="false">Programs</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="impact-tab" data-bs-toggle="tab" data-bs-target="#impact-pane" type="button" role="tab" aria-controls="impact-pane" aria-selected="false">Impact</button>
+                  </li>
+                </ul>
+              </div>
 
-                    <div class="col-lg-10 col-12">
-                        <div class="reveal">
-                            <ul class="nav nav-pills gap-2 mb-4" id="aboutTabs" role="tablist" aria-label="About navigation">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission-pane" type="button" role="tab" aria-controls="mission-pane" aria-selected="true">
-                                        Mission
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="programs-tab" data-bs-toggle="tab" data-bs-target="#programs-pane" type="button" role="tab" aria-controls="programs-pane" aria-selected="false">
-                                        Programs
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="impact-tab" data-bs-toggle="tab" data-bs-target="#impact-pane" type="button" role="tab" aria-controls="impact-pane" aria-selected="false">
-                                        Impact
-                                    </button>
-                                </li>
-                            </ul>
+              <div class="tab-content reveal" id="aboutTabsContent">
+                <!-- Mission pane -->
+                <div class="tab-pane fade show active" id="mission-pane" role="tabpanel" aria-labelledby="mission-tab" tabindex="0">
+                  <h2 class="mb-3">Mission</h2>
+                  <p>The Chinese Music and Culture Association fosters music, cultural enrichment, and artistic collaboration within the Chinese community across the United States. CMCA supports a wide range of cultural and artistic initiatives that serve musicians, dancers, visual artists, writers, and performers across disciplines.</p>
+
+                  <h3 class="mt-4 mb-3">Core Goals</h3>
+                  <div class="row g-3 row-cols-1 row-cols-md-2">
+                    <div class="col">
+                      <div class="p-4 border rounded-3 h-100 card-elevate">
+                        <div class="d-flex align-items-start">
+                          <span class="icon-circle me-3" aria-hidden="true"><i class="bi-music-note-beamed"></i></span>
+                          <div>
+                            <h5 class="mb-1">Performance Opportunities</h5>
+                            <p class="mb-0 text-muted">Create stages for artists and community members to shine.</p>
+                          </div>
                         </div>
-
-                        <div class="tab-content reveal" id="aboutTabsContent">
-                            <!-- Mission pane -->
-                            <div class="tab-pane fade show active" id="mission-pane" role="tabpanel" aria-labelledby="mission-tab" tabindex="0">
-                                <h2 class="mb-3">Mission</h2>
-                                <p>The Chinese Music and Culture Association fosters music, cultural enrichment, and artistic collaboration within the Chinese community across the United States. CMCA supports a wide range of cultural and artistic initiatives that serve musicians, dancers, visual artists, writers, and performers across disciplines.</p>
-
-                                <h3 class="mt-4 mb-3">Core Goals</h3>
-                                <div class="row g-3 row-cols-1 row-cols-md-2">
-                                    <div class="col">
-                                        <div class="p-4 border rounded-3 h-100 card-elevate">
-                                            <div class="d-flex align-items-start">
-                                                <span class="icon-circle me-3" aria-hidden="true"><i class="bi-music-note-beamed"></i></span>
-                                                <div>
-                                                    <h5 class="mb-1">Performance Opportunities</h5>
-                                                    <p class="mb-0 text-muted">Create stages for artists and community members to shine.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="p-4 border rounded-3 h-100 card-elevate">
-                                            <div class="d-flex align-items-start">
-                                                <span class="icon-circle me-3" aria-hidden="true"><i class="bi-people"></i></span>
-                                                <div>
-                                                    <h5 class="mb-1">Cultural Understanding</h5>
-                                                    <p class="mb-0 text-muted">Promote cross-cultural dialogue locally and globally.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="p-4 border rounded-3 h-100 card-elevate">
-                                            <div class="d-flex align-items-start">
-                                                <span class="icon-circle me-3" aria-hidden="true"><i class="bi-mortarboard"></i></span>
-                                                <div>
-                                                    <h5 class="mb-1">Artistic Growth</h5>
-                                                    <p class="mb-0 text-muted">Support education, mentorship, and engagement.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="p-4 border rounded-3 h-100 card-elevate">
-                                            <div class="d-flex align-items-start">
-                                                <span class="icon-circle me-3" aria-hidden="true"><i class="bi-diagram-3"></i></span>
-                                                <div>
-                                                    <h5 class="mb-1">Career Development</h5>
-                                                    <p class="mb-0 text-muted">Connect artists with resources and collaborators.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Programs pane -->
-                            <div class="tab-pane fade" id="programs-pane" role="tabpanel" aria-labelledby="programs-tab" tabindex="0">
-                                <h2 class="mb-3">Programs & Activities</h2>
-                                <p>CMCA organizes and supports performances, community events, workshops, masterclasses, and educational outreach. We partner with cultural institutions, educational organizations, and local businesses to expand our reach and impact.</p>
-
-                                <div class="d-flex flex-wrap gap-2 mt-3" aria-label="Program types">
-                                    <span class="feature-chip"><i class="bi-easel2 text-primary" aria-hidden="true"></i> Workshops</span>
-                                    <span class="feature-chip"><i class="bi-mic text-primary" aria-hidden="true"></i> Performances</span>
-                                    <span class="feature-chip"><i class="bi-people text-primary" aria-hidden="true"></i> Community events</span>
-                                    <span class="feature-chip"><i class="bi-journal-text text-primary" aria-hidden="true"></i> Masterclasses</span>
-                                    <span class="feature-chip"><i class="bi-globe2 text-primary" aria-hidden="true"></i> Cultural exchange</span>
-                                </div>
-
-                                <h3 class="mt-4 mb-3">Key Initiatives</h3>
-                                <div class="accordion accordion-flush" id="initiativesAccordion">
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init1-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init1" aria-expanded="false" aria-controls="init1">
-                                                <i class="bi-person-workspace text-primary me-2" aria-hidden="true"></i> Artist Residencies and Fellowships
-                                            </button>
-                                        </h4>
-                                        <div id="init1" class="accordion-collapse collapse" aria-labelledby="init1-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Provide time, space, and mentorship for artists to develop new work and collaborations.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init2-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init2" aria-expanded="false" aria-controls="init2">
-                                                <i class="bi-brightness-high text-primary me-2" aria-hidden="true"></i> Youth Arts Development
-                                            </button>
-                                        </h4>
-                                        <div id="init2" class="accordion-collapse collapse" aria-labelledby="init2-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Nurture young talent with training programs, clinics, and performance opportunities.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init3-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init3" aria-expanded="false" aria-controls="init3">
-                                                <i class="bi-megaphone text-primary me-2" aria-hidden="true"></i> Community Arts Events and Festivals
-                                            </button>
-                                        </h4>
-                                        <div id="init3" class="accordion-collapse collapse" aria-labelledby="init3-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Celebrate culture and bring neighbors together through public events and showcases.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init4-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init4" aria-expanded="false" aria-controls="init4">
-                                                <i class="bi-emoji-smile text-primary me-2" aria-hidden="true"></i> Community Social Events and Cultural Celebrations
-                                            </button>
-                                        </h4>
-                                        <div id="init4" class="accordion-collapse collapse" aria-labelledby="init4-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Build friendships and belonging through seasonal gatherings and cultural holidays.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init5-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init5" aria-expanded="false" aria-controls="init5">
-                                                <i class="bi-easel2 text-primary me-2" aria-hidden="true"></i> Workshops and Masterclasses
-                                            </button>
-                                        </h4>
-                                        <div id="init5" class="accordion-collapse collapse" aria-labelledby="init5-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Hands-on sessions with experienced clinicians and guest educators.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init6-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init6" aria-expanded="false" aria-controls="init6">
-                                                <i class="bi-shuffle text-primary me-2" aria-hidden="true"></i> Creative Exchange Programs
-                                            </button>
-                                        </h4>
-                                        <div id="init6" class="accordion-collapse collapse" aria-labelledby="init6-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Connect artists across regions and disciplines for shared learning and projects.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init7-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init7" aria-expanded="false" aria-controls="init7">
-                                                <i class="bi-building-gear text-primary me-2" aria-hidden="true"></i> Arts Group Incubation and Management
-                                            </button>
-                                        </h4>
-                                        <div id="init7" class="accordion-collapse collapse" aria-labelledby="init7-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Provide structure, rehearsal support, and leadership development for ensembles.</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h4 class="accordion-header" id="init8-h">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init8" aria-expanded="false" aria-controls="init8">
-                                                <i class="bi-heart text-primary me-2" aria-hidden="true"></i> Fundraising for Charitable Causes
-                                            </button>
-                                        </h4>
-                                        <div id="init8" class="accordion-collapse collapse" aria-labelledby="init8-h" data-bs-parent="#initiativesAccordion">
-                                            <div class="accordion-body">Partner with community organizations to amplify impact through giving.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Impact pane -->
-                            <div class="tab-pane fade" id="impact-pane" role="tabpanel" aria-labelledby="impact-tab" tabindex="0">
-                                <h2 class="mb-3">Impact Vision</h2>
-                                <p>Through its activities, CMCA aims to build an inclusive community that celebrates diversity in the arts and nurtures creativity. We aspire to leave a lasting impact on both the Chinese community and the wider arts landscape through collaboration, education, and cultural exchange.</p>
-
-                                <div class="mt-4">
-                                    <a href="groups.html" class="btn custom-btn">Explore groups</a>
-                                    <a href="donation.html" class="btn custom-btn ms-2">Support CMCA</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr class="my-5">
-
-                        <div class="reveal">
-                            <h2 class="mb-4">Current Groups</h2>
-                            <div class="row g-4 row-cols-1 row-cols-md-3">
-                                <div class="col">
-                                    <div class="p-4 border rounded-3 h-100 card-elevate">
-                                        <div class="d-flex align-items-start">
-                                            <span class="icon-circle me-3" aria-hidden="true"><i class="bi-vinyl"></i></span>
-                                            <div>
-                                                <h5 class="mb-1">Find A Cappella</h5>
-                                                <p class="text-muted mb-3">Semi‑professional, not‑for‑profit a cappella group with fixed members.</p>
-                                                <a class="stretched-link" href="groups.html" aria-label="Learn more about Find A Cappella"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="p-4 border rounded-3 h-100 card-elevate">
-                                        <div class="d-flex align-items-start">
-                                            <span class="icon-circle me-3" aria-hidden="true"><i class="bi-music-note-list"></i></span>
-                                            <div>
-                                                <h5 class="mb-1">Sudo Chorus</h5>
-                                                <p class="text-muted mb-3">Not‑for‑profit choir rehearsing weekly and performing multiple concerts.</p>
-                                                <a class="stretched-link" href="groups.html" aria-label="Learn more about Sudo Chorus"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="p-4 border rounded-3 h-100 card-elevate">
-                                        <div class="d-flex align-items-start">
-                                            <span class="icon-circle me-3" aria-hidden="true"><i class="bi-people"></i></span>
-                                            <div>
-                                                <h5 class="mb-1">Drop‑In Chinese A Cappella</h5>
-                                                <p class="text-muted mb-3">Public, informal monthly singing group open to all.</p>
-                                                <a class="stretched-link" href="groups.html" aria-label="Learn more about Drop-In Chinese A Cappella"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                      </div>
                     </div>
-
+                    <div class="col">
+                      <div class="p-4 border rounded-3 h-100 card-elevate">
+                        <div class="d-flex align-items-start">
+                          <span class="icon-circle me-3" aria-hidden="true"><i class="bi-people"></i></span>
+                          <div>
+                            <h5 class="mb-1">Cultural Understanding</h5>
+                            <p class="mb-0 text-muted">Promote cross-cultural dialogue locally and globally.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="p-4 border rounded-3 h-100 card-elevate">
+                        <div class="d-flex align-items-start">
+                          <span class="icon-circle me-3" aria-hidden="true"><i class="bi-mortarboard"></i></span>
+                          <div>
+                            <h5 class="mb-1">Artistic Growth</h5>
+                            <p class="mb-0 text-muted">Support education, mentorship, and engagement.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="p-4 border rounded-3 h-100 card-elevate">
+                        <div class="d-flex align-items-start">
+                          <span class="icon-circle me-3" aria-hidden="true"><i class="bi-diagram-3"></i></span>
+                          <div>
+                            <h5 class="mb-1">Career Development</h5>
+                            <p class="mb-0 text-muted">Connect artists with resources and collaborators.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section-padding bg-light">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-12">
-                        <h2 class="mb-4">Our Values</h2>
+                <!-- Programs pane -->
+                <div class="tab-pane fade" id="programs-pane" role="tabpanel" aria-labelledby="programs-tab" tabindex="0">
+                  <h2 class="mb-3">Programs & Activities</h2>
+                  <p>CMCA organizes and supports performances, community events, workshops, masterclasses, and educational outreach. We partner with cultural institutions, educational organizations, and local businesses to expand our reach and impact.</p>
+
+                  <div class="d-flex flex-wrap gap-2 mt-3" aria-label="Program types">
+                    <span class="feature-chip"><i class="bi-easel2 text-primary" aria-hidden="true"></i> Workshops</span>
+                    <span class="feature-chip"><i class="bi-mic text-primary" aria-hidden="true"></i> Performances</span>
+                    <span class="feature-chip"><i class="bi-people text-primary" aria-hidden="true"></i> Community events</span>
+                    <span class="feature-chip"><i class="bi-journal-text text-primary" aria-hidden="true"></i> Masterclasses</span>
+                    <span class="feature-chip"><i class="bi-globe2 text-primary" aria-hidden="true"></i> Cultural exchange</span>
+                  </div>
+
+                  <h3 class="mt-4 mb-3">Key Initiatives</h3>
+                  <div class="accordion accordion-flush" id="initiativesAccordion">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init1-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init1" aria-expanded="false" aria-controls="init1"><i class="bi-person-workspace text-primary me-2" aria-hidden="true"></i> Artist Residencies and Fellowships</button>
+                      </h4>
+                      <div id="init1" class="accordion-collapse collapse" aria-labelledby="init1-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Provide time, space, and mentorship for artists to develop new work and collaborations.</div>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-4 border rounded-3 h-100 card-elevate reveal">
-                            <h5><i class="bi-heart text-primary me-2" aria-hidden="true"></i>Community</h5>
-                            <p class="text-muted mb-0">We create welcoming spaces where people connect through music.</p>
-                        </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init2-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init2" aria-expanded="false" aria-controls="init2"><i class="bi-brightness-high text-primary me-2" aria-hidden="true"></i> Youth Arts Development</button>
+                      </h4>
+                      <div id="init2" class="accordion-collapse collapse" aria-labelledby="init2-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Nurture young talent with training programs, clinics, and performance opportunities.</div>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-4 border rounded-3 h-100 card-elevate reveal">
-                            <h5><i class="bi-stars text-primary me-2" aria-hidden="true"></i>Excellence</h5>
-                            <p class="text-muted mb-0">We support artistic growth with thoughtful coaching and programs.</p>
-                        </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init3-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init3" aria-expanded="false" aria-controls="init3"><i class="bi-megaphone text-primary me-2" aria-hidden="true"></i> Community Arts Events and Festivals</button>
+                      </h4>
+                      <div id="init3" class="accordion-collapse collapse" aria-labelledby="init3-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Celebrate culture and bring neighbors together through public events and showcases.</div>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-4 border rounded-3 h-100 card-elevate reveal">
-                            <h5><i class="bi-emoji-smile text-primary me-2" aria-hidden="true"></i>Inclusion</h5>
-                            <p class="text-muted mb-0">Beginners and experienced performers are equally valued.</p>
-                        </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init4-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init4" aria-expanded="false" aria-controls="init4"><i class="bi-emoji-smile text-primary me-2" aria-hidden="true"></i> Community Social Events and Cultural Celebrations</button>
+                      </h4>
+                      <div id="init4" class="accordion-collapse collapse" aria-labelledby="init4-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Build friendships and belonging through seasonal gatherings and cultural holidays.</div>
+                      </div>
                     </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init5-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init5" aria-expanded="false" aria-controls="init5"><i class="bi-easel2 text-primary me-2" aria-hidden="true"></i> Workshops and Masterclasses</button>
+                      </h4>
+                      <div id="init5" class="accordion-collapse collapse" aria-labelledby="init5-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Hands-on sessions with experienced clinicians and guest educators.</div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init6-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init6" aria-expanded="false" aria-controls="init6"><i class="bi-shuffle text-primary me-2" aria-hidden="true"></i> Creative Exchange Programs</button>
+                      </h4>
+                      <div id="init6" class="accordion-collapse collapse" aria-labelledby="init6-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Connect artists across regions and disciplines for shared learning and projects.</div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init7-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init7" aria-expanded="false" aria-controls="init7"><i class="bi-building-gear text-primary me-2" aria-hidden="true"></i> Arts Group Incubation and Management</button>
+                      </h4>
+                      <div id="init7" class="accordion-collapse collapse" aria-labelledby="init7-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Provide structure, rehearsal support, and leadership development for ensembles.</div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="init8-h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#init8" aria-expanded="false" aria-controls="init8"><i class="bi-heart text-primary me-2" aria-hidden="true"></i> Fundraising for Charitable Causes</button>
+                      </h4>
+                      <div id="init8" class="accordion-collapse collapse" aria-labelledby="init8-h" data-bs-parent="#initiativesAccordion">
+                        <div class="accordion-body">Partner with community organizations to amplify impact through giving.</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
 
+                <!-- Impact pane -->
+                <div class="tab-pane fade" id="impact-pane" role="tabpanel" aria-labelledby="impact-tab" tabindex="0">
+                  <h2 class="mb-3">Impact Vision</h2>
+                  <p>Through its activities, CMCA aims to build an inclusive community that celebrates diversity in the arts and nurtures creativity. We aspire to leave a lasting impact on both the Chinese community and the wider arts landscape through collaboration, education, and cultural exchange.</p>
+
+                  <div class="mt-4">
+                    <a href="groups.html" class="btn custom-btn">Explore groups</a>
+                    <a href="donation.html" class="btn custom-btn ms-2">Support CMCA</a>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-5" />
+
+              <div class="reveal">
+                <h2 class="mb-4">Current Groups</h2>
+                <div class="row g-4 row-cols-1 row-cols-md-3">
+                  <div class="col">
+                    <div class="p-4 border rounded-3 h-100 card-elevate">
+                      <div class="d-flex align-items-start">
+                        <span class="icon-circle me-3" aria-hidden="true"><i class="bi-vinyl"></i></span>
+                        <div>
+                          <h5 class="mb-1">Find A Cappella</h5>
+                          <p class="text-muted mb-3">Semi‑professional, not‑for‑profit a cappella group with fixed members.</p>
+                          <a class="stretched-link" href="groups.html" aria-label="Learn more about Find A Cappella"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="p-4 border rounded-3 h-100 card-elevate">
+                      <div class="d-flex align-items-start">
+                        <span class="icon-circle me-3" aria-hidden="true"><i class="bi-music-note-list"></i></span>
+                        <div>
+                          <h5 class="mb-1">Sudo Chorus</h5>
+                          <p class="text-muted mb-3">Not‑for‑profit choir rehearsing weekly and performing multiple concerts.</p>
+                          <a class="stretched-link" href="groups.html" aria-label="Learn more about Sudo Chorus"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="p-4 border rounded-3 h-100 card-elevate">
+                      <div class="d-flex align-items-start">
+                        <span class="icon-circle me-3" aria-hidden="true"><i class="bi-people"></i></span>
+                        <div>
+                          <h5 class="mb-1">Drop‑In Chinese A Cappella</h5>
+                          <p class="text-muted mb-3">Public, informal monthly singing group open to all.</p>
+                          <a class="stretched-link" href="groups.html" aria-label="Learn more about Drop-In Chinese A Cappella"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12">
+              <h2 class="mb-4">Our Values</h2>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border rounded-3 h-100 card-elevate reveal">
+                <h5><i class="bi-heart text-primary me-2" aria-hidden="true"></i>Community</h5>
+                <p class="text-muted mb-0">We create welcoming spaces where people connect through music.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border rounded-3 h-100 card-elevate reveal">
+                <h5><i class="bi-stars text-primary me-2" aria-hidden="true"></i>Excellence</h5>
+                <p class="text-muted mb-0">We support artistic growth with thoughtful coaching and programs.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border rounded-3 h-100 card-elevate reveal">
+                <h5><i class="bi-emoji-smile text-primary me-2" aria-hidden="true"></i>Inclusion</h5>
+                <p class="text-muted mb-0">Beginners and experienced performers are equally valued.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div data-include="footer"></div>
@@ -405,24 +378,29 @@
     <script src="js/includes.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        // Lightweight reveal-on-scroll
-        (function() {
-            var els = document.querySelectorAll('.reveal');
-            if (!('IntersectionObserver' in window) || els.length === 0) {
-                els.forEach(function(el){ el.classList.add('reveal-visible'); });
-                return;
-            }
-            var io = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            els.forEach(function(el){ io.observe(el); });
-        })();
+      // Lightweight reveal-on-scroll
+      (function () {
+        var els = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window) || els.length === 0) {
+          els.forEach(function (el) {
+            el.classList.add("reveal-visible");
+          });
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
     </script>
-
-</body>
-
+  </body>
 </html>
