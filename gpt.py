@@ -16,6 +16,7 @@ FILES = [
     "faq.html",
     "partials.html",
     "js/includes.js",
+    "js/custom.js",
 ]
 
 IMAGES_FOLDER = "./images"

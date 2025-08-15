@@ -1,11 +1,28 @@
-
   (function ($) {
   
   "use strict";
 
-    // PRE LOADER
-    $(window).load(function(){
-      $('.preloader').delay(500).slideUp('slow'); // set duration in brackets    
+    // PRE LOADER: ensure it hides even if injected after window 'load' (race with includes.js fetch)
+    $(document).ready(function(){
+        function tryHideOnce() {
+            var $pre = $('.preloader');
+            if ($pre.length) {
+                $pre.delay(500).fadeOut('slow');
+                return true;
+            }
+            return false;
+        }
+
+        $(window).on('load', function(){
+            if (tryHideOnce()) return;
+            // Retry briefly in case the preloader template is injected after the load event
+            var attempts = 100; // ~5s max (100 * 50ms)
+            var iv = setInterval(function(){
+                if (tryHideOnce() || --attempts <= 0) {
+                    clearInterval(iv);
+                }
+            }, 50);
+        });
     });
 
     // NAVBAR
