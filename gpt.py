@@ -15,6 +15,7 @@ FILES = [
     "donation.html",
     "faq.html",
     "partials.html",
+    "js/includes.js",
 ]
 
 IMAGES_FOLDER = "./images"
@@ -82,8 +83,7 @@ Here are the current files:
 
     resp = client.chat.completions.create(
         model="gpt-5",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0
+        messages=[{"role": "user", "content": prompt}]
     )
     return resp.choices[0].message.content
 
