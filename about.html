@@ -92,56 +92,12 @@
 </head>
 
 <body>
-    <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+    <div data-include="skip"></div>
 
-    <section class="preloader" aria-label="Loading">
-        <div class="spinner">
-            <span class="sk-inner-circle"></span>
-        </div>
-    </section>
+    <div data-include="preloader"></div>
 
     <main id="main">
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
-                </button>
-
-                <a class="navbar-brand" href="index.html" aria-label="CMCA Home">
-                    <strong><span>拾果</span> CMCA</strong>
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="about.html" aria-current="page">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="groups.html">Groups</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="donation.html">Donation</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div data-include="navbar"></div>
 
         <header class="site-header section-padding-img site-header-image">
             <div class="container">
@@ -437,50 +393,14 @@
 
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-10 me-auto mb-4">
-                    <h4 class="text-white mb-3"><a href="index.html">CMCA</a></h4>
-                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
-                    <br>
-                    <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
-                            target="_blank" rel="noopener">Tooplate</a></p>
-                </div>
-
-                <div class="col-lg-5 col-8">
-                    <h5 class="text-white mb-3">Sitemap</h5>
-
-                    <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
-                        <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
-                        <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
-                        <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-                        <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
-                        <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-4">
-                    <h5 class="text-white mb-3">Social</h5>
-
-                    <ul class="social-icon" aria-label="Social links">
-                        <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
-                        <li><a href="mailto:operations.cmca@gmail.com" class="social-icon-link bi-envelope" aria-label="Email"></a></li>
-                        <li><a href="https://www.instagram.com/find_a_cappella" class="social-icon-link bi-instagram" aria-label="Instagram"></a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </footer>
+    <div data-include="footer"></div>
 
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Headroom.js"></script>
     <script src="js/jQuery.headroom.js"></script>
+    <script src="js/includes.js"></script>
     <script src="js/custom.js"></script>
     <script>
         // Lightweight reveal-on-scroll
