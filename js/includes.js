@@ -2,6 +2,7 @@
   function currentPath() {
     var p = (location.pathname.split("/").pop() || "").trim();
     if (!p || p === "/") return "index.html";
+    if (!p.endsWith(".html")) p += ".html";
     return p;
   }
 
