@@ -1,9 +1,145 @@
 
 /* custom.css - SEO & design refresh overrides */
+
+/* Calendar Section Styles (clean, balanced cards) */
+.calendar-section {
+    padding: 4.5rem 0 3rem;
+    background: linear-gradient(180deg, #fbfdff 0%, #f3f7fb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 1.75rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.calendar-section .row {
+    justify-content: center;
+}
+
+.calendar-section .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+    max-width: 320px;
+    padding: 12px;
+}
+
+.calendar-card {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(16,24,39,0.04);
+    box-shadow: 0 8px 28px rgba(16,24,39,0.06);
+    overflow: hidden;
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    display: block;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.calendar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(16,24,39,0.09);
+}
+
+.calendar-accent {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #ff9a65);
+    box-shadow: 0 6px 18px rgba(255,127,80,0.08);
+}
+
+.calendar-month {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.calendar-day {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 6px 0 0;
+    color: var(--dark-color);
+    /* use tabular numbers so single- and double-digit numbers occupy consistent width */
+    font-variant-numeric: tabular-nums;
+    -webkit-font-feature-settings: "tnum" 1;
+    font-feature-settings: "tnum" 1;
+    /* ensure exact centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.calendar-content {
+    padding: 10px 14px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: calc(100% - 140px);
+    background: transparent;
+}
+
+.calendar-time {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    line-height: 1.05;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255,127,80,0.06);
+}
+
+.calendar-description {
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--muted-color);
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .calendar-section .col-lg-4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .calendar-section .col-lg-4 {
+        width: 100%;
+        max-width: 360px;
+        padding: 10px;
+    }
+}
+
 :root{
-  --base-font-size:16px;
-  --heading-font-weight:700;
-  --body-font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --base-font-size:16px;
+    --heading-font-weight:700;
+    --body-font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --primary-color: #ff7f50; /* coral/orange used across calendar accents */
+    --dark-color: #0b1220; /* primary dark text color */
+    --muted-color: #475569; /* soft muted text */
 }
 
 /* Improve base typography */
