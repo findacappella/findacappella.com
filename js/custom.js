@@ -49,6 +49,7 @@
           const [month, day] = event.date.split("-").map((s) => parseInt(s, 10));
           const monthName = new Date(2000, month - 1, 1).toLocaleString("default", { month: "short" }).toUpperCase();
 
+          const description2 = event.description2 ? `<div class="calendar-description2 text-muted small">${event.description2}</div>` : "";
           const eventCard = `
             <div class="col-lg-4 col-md-6 col-12">
               <a href="${event.url}" class="calendar-card">
@@ -58,6 +59,7 @@
                 <div class="calendar-content">
                   <div class="calendar-time">${event.time}</div>
                   <div class="calendar-description">${event.description}</div>
+                  ${description2}
                 </div>
               </a>
             </div>
