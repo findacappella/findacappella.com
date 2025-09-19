@@ -1,30 +1,44 @@
 [
   {
-    "date": "09-14",
-    "time": "2:30PM - 5:30PM",
-    "description": "阿卡体验社",
-    "description2": "Community drop-in a cappella session",
+    "date": "09-27",
+    "time": "7:30PM - 9:00PM",
+    "description": "拾度合唱团周年音乐会",
+    "description2": "@南湾·首演",
     "url": "https://my.findacappella.com/cmca/event"
   },
   {
     "date": "10-04",
     "time": "1PM - 4PM",
-    "description": "云集音乐会 致·周杰伦",
-    "description2": "A live tribute concert to Jay Chou",
+    "description": "云集音乐会",
+    "description2": "致·周杰伦",
     "url": "https://www.eventbrite.com/e/zai-ge-zai-gu-yunji-live-concert-to-jay-chou-tickets-1545816872879?aff=erelexpmlt"
+  },
+  {
+    "date": "10-04",
+    "time": "7:30PM - 9:00PM",
+    "description": "拾度合唱团周年音乐会",
+    "description2": "@南湾·欢度中秋",
+    "url": "https://my.findacappella.com/cmca/event"
   },
   {
     "date": "10-12",
     "time": "2:30PM - 5:30PM",
     "description": "阿卡体验社",
-    "description2": "Community drop-in a cappella session",
+    "description2": "",
+    "url": "https://my.findacappella.com/cmca/event"
+  },
+  {
+    "date": "10-18",
+    "time": "7:30PM - 9:00PM",
+    "description": "拾度合唱团周年音乐会",
+    "description2": "@伯克利·收官",
     "url": "https://my.findacappella.com/cmca/event"
   },
   {
     "date": "10-19",
     "time": "2PM - 6PM",
     "description": "Techapella",
-    "description2": "Annual a cappella showcase in the tech community",
+    "description2": "Showcase in the tech community",
     "url": "https://www.techapella.org/"
   }
 ]
