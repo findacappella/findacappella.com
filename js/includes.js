@@ -10,7 +10,24 @@
     var tpl = root.querySelector("#tpl-" + name);
     if (!tpl) return;
     document.querySelectorAll('[data-include="' + name + '"]').forEach(function (mount) {
+      // Clone the template content and ensure any <script> tags inside the template
+      // are replaced with freshly created <script> elements so they execute when
+      // the fragment is inserted into the document.
       var fragment = tpl.content.cloneNode(true);
+      var scripts = fragment.querySelectorAll('script');
+      scripts.forEach(function (oldScript) {
+        var newScript = document.createElement('script');
+        // copy attributes (src, type, id, async, defer, etc.)
+        for (var i = 0; i < oldScript.attributes.length; i++) {
+          var attr = oldScript.attributes[i];
+          newScript.setAttribute(attr.name, attr.value);
+        }
+        // copy inline script content (if any)
+        if (oldScript.textContent) newScript.textContent = oldScript.textContent;
+        // replace the inert script in the fragment with the new one
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+
       mount.replaceWith(fragment);
     });
   }
