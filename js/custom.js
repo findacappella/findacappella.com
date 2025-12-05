@@ -67,7 +67,13 @@
           eventsContainer.insertAdjacentHTML("beforeend", eventCard);
         });
       })
-      .catch((error) => console.error("Error loading events:", error));
+      .catch((error) => {
+        console.error("Error loading events:", error);
+        const eventsContainer = document.getElementById("events-container");
+        if (eventsContainer) {
+          eventsContainer.innerHTML = '<div class="col-12 text-center"><p class="text-muted">Unable to load events at this time. Please check back later or <a href="contact.html">contact us</a> for upcoming events.</p></div>';
+        }
+      });
   }
 
   // PRE LOADER: ensure it hides even if injected after window 'load' (race with includes.js fetch)
