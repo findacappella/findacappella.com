@@ -8,7 +8,7 @@
     <!-- Reusable partials are stored in template tags for safe cloning -->
 
     <template id="tpl-skip">
-      <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+      <a href="#main" class="visually-hidden-focusable" data-i18n="skip.link">Skip to main content</a>
     </template>
 
     <template id="tpl-preloader">
@@ -33,29 +33,36 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about.html" data-i18n="nav.about">About</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="groups.html">Groups</a>
+                <a class="nav-link" href="groups.html" data-i18n="nav.groups">Groups</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQs</a>
+                <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQs</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="donation.html">Donation</a>
+                <a class="nav-link" href="donation.html" data-i18n="nav.donation">Donation</a>
               </li>
             </ul>
+
+            <div class="d-flex align-items-center gap-2 ms-lg-3 language-switcher" data-language-switcher>
+              <div class="btn-group btn-group-sm" role="group" aria-label="Language selector">
+                <button type="button" class="btn btn-outline-primary" data-lang="en" data-i18n="lang.en">EN</button>
+                <button type="button" class="btn btn-outline-primary" data-lang="zh" data-i18n="lang.zh">中文</button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -67,26 +74,26 @@
           <div class="row">
             <div class="col-lg-3 col-10 me-auto mb-4">
               <h4 class="text-white mb-3"><a href="index.html">CMCA</a></h4>
-              <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2025 <strong>CMCA</strong></p>
+              <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0" data-i18n="footer.copyright" data-i18n-html="true">Copyright © 2025 <strong>CMCA</strong></p>
               <br />
-              <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank" rel="noopener noreferrer">Tooplate</a></p>
+              <p class="copyright-text" data-i18n="footer.design" data-i18n-html="true">Designed by <a href="https://www.tooplate.com/" target="_blank" rel="noopener noreferrer">Tooplate</a></p>
             </div>
 
             <div class="col-lg-5 col-8">
-              <h5 class="text-white mb-3">Sitemap</h5>
+              <h5 class="text-white mb-3" data-i18n="footer.sitemap">Sitemap</h5>
 
               <ul class="footer-menu d-flex flex-wrap" aria-label="Footer navigation">
-                <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
-                <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link">Groups</a></li>
-                <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link">Privacy policy</a></li>
-                <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
-                <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
-                <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link">Donation</a></li>
+                <li class="footer-menu-item"><a href="about.html" class="footer-menu-link" data-i18n="footer.story">Story</a></li>
+                <li class="footer-menu-item"><a href="groups.html" class="footer-menu-link" data-i18n="footer.groups">Groups</a></li>
+                <li class="footer-menu-item"><a href="contact.html#privacy" class="footer-menu-link" data-i18n="footer.privacy">Privacy policy</a></li>
+                <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link" data-i18n="footer.faq">FAQs</a></li>
+                <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link" data-i18n="footer.contact">Contact</a></li>
+                <li class="footer-menu-item"><a href="donation.html" class="footer-menu-link" data-i18n="footer.donation">Donation</a></li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-4">
-              <h5 class="text-white mb-3">Social</h5>
+              <h5 class="text-white mb-3" data-i18n="footer.social">Social</h5>
 
               <ul class="social-icon" aria-label="Social links">
                 <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>

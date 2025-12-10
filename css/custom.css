@@ -1,6 +1,9 @@
 
 /* custom.css - SEO & design refresh overrides */
 
+/* Chinese webfont for smoother glyph rendering */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap");
+
 /* Calendar Section Styles (clean, balanced cards) */
 .calendar-section {
     padding: 4.5rem 0 3rem;
@@ -188,3 +191,97 @@ footer{ font-size:0.95rem; padding:2rem 0; background:#0f1720; color:#d1d5db;}
 
 /* Accessibility-friendly focus outlines */
 a:focus, button:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 3px; }
+
+/* Language switcher: align with brand palette */
+.language-switcher .btn-group .btn{
+  border-radius: 999px !important;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: #fff;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  line-height: 1.2;
+  min-width: 64px;
+}
+.language-switcher .btn-group .btn + .btn{
+  margin-left: 8px;
+}
+.language-switcher .btn-group .btn:hover,
+.language-switcher .btn-group .btn:focus{
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 6px 16px rgba(255, 127, 80, 0.2);
+}
+.language-switcher .btn-group .btn.active,
+.language-switcher .btn-group .btn[aria-pressed="true"]{
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 18px rgba(255, 127, 80, 0.28);
+}
+.language-switcher .small.text-muted{
+  color: #64748b !important;
+  font-weight: 600;
+}
+
+/* Chinese font stack for better legibility */
+html[lang^="zh"], body[lang^="zh"], :lang(zh){
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Heiti SC", "Source Han Sans SC", "Hiragino Sans GB", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Tone down letter spacing and tighten leading for dense Chinese copy */
+html[lang^="zh"] .slick-title,
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3,
+html[lang^="zh"] h4 {
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+html[lang^="zh"] .lead,
+html[lang^="zh"] p,
+html[lang^="zh"] li {
+  line-height: 1.7;
+}
+
+/* Keep hero CTA and chips balanced with wider Chinese text */
+html[lang^="zh"] .btn.custom-btn,
+html[lang^="zh"] .feature-chip {
+  white-space: nowrap;
+}
+
+/* Prevent navbar/hero text wrap for Chinese */
+@media (min-width: 768px){
+  html[lang^="zh"] .navbar-brand span,
+  html[lang^="zh"] .navbar .nav-link {
+    letter-spacing: 0;
+  }
+}
+
+/* Keep brand lockup styling consistent across languages */
+html[lang^="zh"] .navbar-brand,
+html[lang^="zh"] .navbar-brand * {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+/* Ensure the strong tag stays bold in both locales */
+.navbar-brand strong { font-weight: 700; }
+
+/* Mobile: align switcher inside navbar dropdown */
+@media (max-width: 991px){
+  .navbar .language-switcher{
+    width: 100%;
+    padding: 0.4rem 0.25rem 0.1rem;
+    justify-content: flex-start;
+  }
+  .navbar .language-switcher .btn-group{
+    width: 100%;
+  }
+  .navbar .language-switcher .btn-group .btn{
+    flex: 1 1 0;
+    text-align: center;
+  }
+}

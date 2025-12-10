@@ -2,6 +2,7 @@
   "use strict";
 
   function loadEvents() {
+    const t = (window.CMCA_I18N && window.CMCA_I18N.t) || (() => null);
     fetch("activities.json")
       .then((response) => {
         if (!response.ok) {
@@ -31,7 +32,7 @@
           .sort((a, b) => a.eventDate - b.eventDate);
 
         if (upcomingEvents.length === 0) {
-          eventsContainer.innerHTML = '<div class="col-12 text-center"><p>No upcoming events at this time. Check back soon!</p></div>';
+          eventsContainer.innerHTML = `<div class="col-12 text-center"><p data-i18n="home.events.empty">${t("home.events.empty") || "No upcoming events at this time. Check back soon!"}</p></div>`;
           return;
         }
 
@@ -61,10 +62,11 @@
         console.error("Error loading events:", error);
         const eventsContainer = document.getElementById("events-container");
         if (eventsContainer) {
-          eventsContainer.innerHTML = '<div class="col-12 text-center"><p class="text-muted">Unable to load events at this time. Please check back later or <a href="contact.html">contact us</a> for upcoming events.</p></div>';
+          eventsContainer.innerHTML = `<div class="col-12 text-center"><p class="text-muted" data-i18n="home.events.error">${t("home.events.error") || 'Unable to load events at this time. Please check back later or <a href="contact.html">contact us</a> for upcoming events.'}</p></div>`;
         }
       });
   }
+  window.CMCA_reloadEvents = loadEvents;
 
   // PRE LOADER: ensure it hides even if injected after window 'load' (race with includes.js fetch)
   $(document).ready(function () {
@@ -89,6 +91,11 @@
         }
       }, 50);
     });
+  });
+
+  // Re-render events when language changes so inline text matches selection
+  document.addEventListener("i18n:languageChanged", function () {
+    loadEvents();
   });
 
   // NAVBAR

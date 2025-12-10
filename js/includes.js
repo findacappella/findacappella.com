@@ -71,6 +71,8 @@
 
         setActiveNav();
         adjustFooterForContact();
+
+        document.dispatchEvent(new CustomEvent("partials:loaded"));
       })
       .catch(function () {
         // If partials fail to load, leave the placeholders alone.

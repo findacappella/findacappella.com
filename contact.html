@@ -90,7 +90,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-10 col-12 header-info">
-              <h1>
+              <h1 data-i18n="contact.header.title" data-i18n-html="true">
                 <span class="d-block text-primary">Say hello to us</span>
                 <span class="d-block text-dark">We’d love to hear from you</span>
               </h1>
@@ -104,43 +104,43 @@
           <!-- Quick actions turn lists into tappable cards -->
           <div class="row mb-4">
             <div class="col-12">
-              <h2 class="h4 mb-3">How can we help?</h2>
+              <h2 class="h4 mb-3" data-i18n="contact.actions.title">How can we help?</h2>
             </div>
             <div class="col-6 col-md mb-3">
               <button type="button" class="action-card fade-up" data-subject="Sudo Chorus — I'd like to sing" aria-label="Join Sudo Chorus">
                 <i class="bi-people-fill text-primary fs-5" aria-hidden="true"></i>
-                <span class="text-start">Join Sudo Chorus</span>
+                <span class="text-start" data-i18n="contact.actions.sudo">Join Sudo Chorus</span>
               </button>
             </div>
             <div class="col-6 col-md mb-3">
               <button type="button" class="action-card fade-up" data-subject="Find A Cappella — Audition inquiry" aria-label="Audition for Find A Cappella">
                 <i class="bi-mic-fill text-primary fs-5" aria-hidden="true"></i>
-                <span class="text-start">Audition for Find A Cappella</span>
+                <span class="text-start" data-i18n="contact.actions.find">Audition for Find A Cappella</span>
               </button>
             </div>
             <div class="col-6 col-md mb-3">
               <button type="button" class="action-card fade-up" data-subject="Workshop — Next session date" aria-label="Workshop info">
                 <i class="bi-music-note-beamed text-primary fs-5" aria-hidden="true"></i>
-                <span class="text-start">Workshop info</span>
+                <span class="text-start" data-i18n="contact.actions.workshop">Workshop info</span>
               </button>
             </div>
             <div class="col-6 col-md mb-3">
               <button type="button" class="action-card fade-up" data-subject="Booking — Performance request" aria-label="Book a performance">
                 <i class="bi-calendar-event text-primary fs-5" aria-hidden="true"></i>
-                <span class="text-start">Book a performance</span>
+                <span class="text-start" data-i18n="contact.actions.booking">Book a performance</span>
               </button>
             </div>
             <div class="col-12 col-md-3 mb-3">
               <button type="button" class="action-card fade-up" data-subject="General — Hello CMCA" aria-label="General inquiry">
                 <i class="bi-chat-dots text-primary fs-5" aria-hidden="true"></i>
-                <span class="text-start">General inquiry</span>
+                <span class="text-start" data-i18n="contact.actions.general">General inquiry</span>
               </button>
             </div>
           </div>
 
           <div class="row">
             <div class="col-lg-6 col-12">
-              <h2 class="mb-4">Let's <span>begin</span></h2>
+              <h2 class="mb-4" data-i18n="contact.form.title" data-i18n-html="true">Let's <span>begin</span></h2>
 
               <form class="contact-form me-lg-5 pe-lg-3 fade-up" role="form" action="https://formsubmit.co/findacappella@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from CMCA website" />
@@ -149,34 +149,34 @@
                 <input type="hidden" name="_autoresponse" value="Thank you for reaching out to CMCA! We have received your message and will get back to you as soon as possible." />
 
                 <div class="form-floating">
-                  <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required aria-required="true" autocomplete="name" />
-                  <label for="name">Full name</label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required aria-required="true" autocomplete="name" data-i18n="contact.form.name" data-i18n-attr="placeholder" />
+                  <label for="name" data-i18n="contact.form.name">Full name</label>
                 </div>
 
                 <div class="form-floating my-4">
-                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required aria-required="true" autocomplete="email" inputmode="email" />
-                  <label for="email">Email address</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required aria-required="true" autocomplete="email" inputmode="email" data-i18n="contact.form.email" data-i18n-attr="placeholder" />
+                  <label for="email" data-i18n="contact.form.email">Email address</label>
                 </div>
 
                 <div class="form-floating my-4">
-                  <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" aria-label="Subject" autocomplete="on" />
-                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" aria-label="Subject" autocomplete="on" data-i18n="contact.form.subject" data-i18n-attr="placeholder,aria-label" />
+                  <label for="subject" data-i18n="contact.form.subject">Subject</label>
                 </div>
 
                 <div class="form-floating mb-4">
-                  <textarea name="message" id="message" class="form-control" placeholder="Leave a comment here" style="height: 160px" aria-label="Message"></textarea>
-                  <label for="message">Comment</label>
+                  <textarea name="message" id="message" class="form-control" placeholder="Leave a comment here" style="height: 160px" aria-label="Message" data-i18n="contact.form.message" data-i18n-attr="placeholder,aria-label"></textarea>
+                  <label for="message" data-i18n="contact.form.message">Comment</label>
                 </div>
 
                 <div class="form-check mb-4">
                   <input class="form-check-input" type="checkbox" name="subscribe" id="subscribe" value="yes" />
-                  <label class="form-check-label" for="subscribe">Subscribe to our mailing list</label>
+                  <label class="form-check-label" for="subscribe" data-i18n="contact.form.subscribe">Subscribe to our mailing list</label>
                 </div>
 
-                <p class="small text-muted mb-3">We typically reply within 2–3 business days. By submitting this form, you consent to us contacting you about your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
+                <p class="small text-muted mb-3" data-i18n="contact.form.disclaimer" data-i18n-html="true">We typically reply within 2–3 business days. By submitting this form, you consent to us contacting you about your inquiry. See our <a href="#privacy">Privacy Policy</a>.</p>
 
                 <div class="col-lg-5 col-6">
-                  <button type="submit" class="btn custom-btn">Send</button>
+                  <button type="submit" class="btn custom-btn" data-i18n="contact.form.submit">Send</button>
                 </div>
               </form>
             </div>
@@ -188,9 +188,9 @@
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-2">
                         <i class="bi-briefcase fs-4 text-primary" aria-hidden="true"></i>
-                        <h6 class="ms-2 mb-0">New Business</h6>
+                        <h6 class="ms-2 mb-0" data-i18n="contact.cards.business.title">New Business</h6>
                       </div>
-                      <p class="text-muted small mb-2">Partnerships, donations, general ops</p>
+                      <p class="text-muted small mb-2" data-i18n="contact.cards.business.desc">Partnerships, donations, general ops</p>
                       <a href="mailto:operations.cmca@gmail.com" class="custom-link">
                         operations.cmca@gmail.com
                         <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
@@ -204,9 +204,9 @@
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-2">
                         <i class="bi-person-lines-fill fs-4 text-primary" aria-hidden="true"></i>
-                        <h6 class="ms-2 mb-0">Main Contact</h6>
+                        <h6 class="ms-2 mb-0" data-i18n="contact.cards.main.title">Main Contact</h6>
                       </div>
-                      <p class="text-muted small mb-2">Group memberships and bookings</p>
+                      <p class="text-muted small mb-2" data-i18n="contact.cards.main.desc">Group memberships and bookings</p>
                       <a href="mailto:findacappella@gmail.com" class="custom-link">
                         findacappella@gmail.com
                         <i class="bi-arrow-right ms-2" aria-hidden="true"></i>
@@ -220,9 +220,9 @@
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-2">
                         <i class="bi-geo-alt fs-4 text-primary" aria-hidden="true"></i>
-                        <h6 class="ms-2 mb-0">Our Office</h6>
+                        <h6 class="ms-2 mb-0" data-i18n="contact.cards.office.title">Our Office</h6>
                       </div>
-                      <p class="text-muted mb-0">San Francisco Bay Area, California, USA</p>
+                      <p class="text-muted mb-0" data-i18n="contact.cards.office.desc">San Francisco Bay Area, California, USA</p>
                     </div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-2">
                         <i class="bi-share fs-4 text-primary" aria-hidden="true"></i>
-                        <h6 class="ms-2 mb-0">Our Socials</h6>
+                        <h6 class="ms-2 mb-0" data-i18n="contact.cards.social.title">Our Socials</h6>
                       </div>
                       <ul class="social-icon" aria-label="Social links">
                         <li><a href="https://www.youtube.com/channel/UCUbUkUV3qqiYBkIkx4ZbEsg" class="social-icon-link bi-youtube" aria-label="YouTube"></a></li>
@@ -252,12 +252,12 @@
               <div class="accordion fade-up" id="privacyAccordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="privacyHeading">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#privacyCollapse" aria-expanded="false" aria-controls="privacyCollapse">Privacy Policy</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#privacyCollapse" aria-expanded="false" aria-controls="privacyCollapse" data-i18n="contact.privacy.title">Privacy Policy</button>
                   </h2>
                   <div id="privacyCollapse" class="accordion-collapse collapse" aria-labelledby="privacyHeading" data-bs-parent="#privacyAccordion">
                     <div class="accordion-body">
-                      <p class="text-muted">We collect the information you submit via this form (name, email, message, and optional subscription preference) to respond to your inquiry and, if you opt in, to send CMCA updates. We do not sell your data. We may use trusted third‑party services (e.g., email providers) to process messages securely. To update or delete your information, contact <a href="mailto:operations.cmca@gmail.com">operations.cmca@gmail.com</a>.</p>
-                      <p class="text-muted mb-0">CMCA is a 501(c)(3) nonprofit organization. This website does not sell or promote restricted goods or services.</p>
+                      <p class="text-muted" data-i18n="contact.privacy.p1" data-i18n-html="true">We collect the information you submit via this form (name, email, message, and optional subscription preference) to respond to your inquiry and, if you opt in, to send CMCA updates. We do not sell your data. We may use trusted third‑party services (e.g., email providers) to process messages securely. To update or delete your information, contact <a href="mailto:operations.cmca@gmail.com">operations.cmca@gmail.com</a>.</p>
+                      <p class="text-muted mb-0" data-i18n="contact.privacy.p2" data-i18n-html="true">CMCA is a 501(c)(3) nonprofit organization. This website does not sell or promote restricted goods or services.</p>
                     </div>
                   </div>
                 </div>
@@ -277,6 +277,7 @@
     <script src="js/jQuery.headroom.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/includes.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/custom.js"></script>
     <script>
       // Prefill subject from URL param and quick-action cards; subtle reveal on scroll

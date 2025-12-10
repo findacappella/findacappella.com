@@ -39,5 +39,12 @@
     "time": "2:00PM - 6:00PM",
     "description": "Techapella",
     "url": "https://www.techapella.org/"
+  },
+  {
+    "date": "12-14",
+    "time": "2:30PM - 5:30PM",
+    "description": "阿卡体验社",
+    "description2": "",
+    "url": "https://my.findacappella.com/cmca/event"
   }
 ]
