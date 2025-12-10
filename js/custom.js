@@ -15,30 +15,20 @@
         // Clear any existing events
         eventsContainer.innerHTML = "";
 
-        // Filter out past events and sort upcoming events
+        // Filter out events that ended more than one week ago, then sort
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
+        const oneWeekAgo = new Date(currentDate);
+        oneWeekAgo.setDate(currentDate.getDate() - 7);
 
-        // Parse dates using numeric Date(...) to avoid timezone parsing issues ("YYYY-MM-DD" -> UTC shifts)
-        const upcomingEvents = data
-          .filter((event) => {
-            const [m, d] = event.date.split("-").map((s) => parseInt(s, 10));
-            let eventDate = new Date(currentYear, m - 1, d);
-            // If the event date has passed this year, consider next year
-            if (eventDate < currentDate) {
-              eventDate = new Date(currentYear + 1, m - 1, d);
-            }
-            return eventDate >= currentDate;
-          })
-          .sort((a, b) => {
-            const [ma, da] = a.date.split("-").map((s) => parseInt(s, 10));
-            const [mb, db] = b.date.split("-").map((s) => parseInt(s, 10));
-            let dateA = new Date(currentYear, ma - 1, da);
-            let dateB = new Date(currentYear, mb - 1, db);
-            if (dateA < currentDate) dateA = new Date(currentYear + 1, ma - 1, da);
-            if (dateB < currentDate) dateB = new Date(currentYear + 1, mb - 1, db);
-            return dateA - dateB;
-          });
+        const eventsWithDates = data.map((event) => {
+          const [m, d] = event.date.split("-").map((s) => parseInt(s, 10));
+          return { ...event, eventDate: new Date(currentYear, m - 1, d) };
+        });
+
+        const upcomingEvents = eventsWithDates
+          .filter(({ eventDate }) => eventDate >= oneWeekAgo) // hide events that ended more than 7 days ago
+          .sort((a, b) => a.eventDate - b.eventDate);
 
         if (upcomingEvents.length === 0) {
           eventsContainer.innerHTML = '<div class="col-12 text-center"><p>No upcoming events at this time. Check back soon!</p></div>';
@@ -46,8 +36,8 @@
         }
 
         upcomingEvents.forEach((event) => {
-          const [month, day] = event.date.split("-").map((s) => parseInt(s, 10));
-          const monthName = new Date(2000, month - 1, 1).toLocaleString("default", { month: "short" }).toUpperCase();
+          const monthName = new Date(2000, event.eventDate.getMonth(), 1).toLocaleString("default", { month: "short" }).toUpperCase();
+          const day = event.eventDate.getDate();
 
           const description2 = event.description2 ? `<div class="calendar-description">${event.description2}</div>` : "";
           const eventCard = `
