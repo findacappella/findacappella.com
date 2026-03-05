@@ -38,23 +38,53 @@
         upcomingEvents.forEach((event) => {
           const monthName = new Date(2000, event.eventDate.getMonth(), 1).toLocaleString("default", { month: "short" }).toUpperCase();
           const day = event.eventDate.getDate();
+          const year = event.eventDate.getFullYear();
 
-          const description2 = event.description2 ? `<div class="calendar-description">${event.description2}</div>` : "";
-          const eventCard = `
-            <div class="col-lg-4 col-md-6 col-12">
-              <a href="${event.url}" class="calendar-card">
-                <span class="calendar-accent" aria-hidden="true"></span>
-                <div class="calendar-month">${monthName}</div>
-                <div class="calendar-day">${parseInt(day)}</div>
-                <div class="calendar-content">
-                  <div class="calendar-time">${event.time}</div>
-                  <div class="calendar-description">${event.description}</div>
-                  ${description2}
-                </div>
-              </a>
-            </div>
-          `;
-          eventsContainer.insertAdjacentHTML("beforeend", eventCard);
+          const col = document.createElement("div");
+          col.className = "col-lg-4 col-md-6 col-12";
+
+          const link = document.createElement("a");
+          link.href = event.url;
+          link.className = "calendar-card";
+
+          const accent = document.createElement("span");
+          accent.className = "calendar-accent";
+          accent.setAttribute("aria-hidden", "true");
+          link.appendChild(accent);
+
+          const monthDiv = document.createElement("div");
+          monthDiv.className = "calendar-month";
+          monthDiv.textContent = monthName + " " + year;
+          link.appendChild(monthDiv);
+
+          const dayDiv = document.createElement("div");
+          dayDiv.className = "calendar-day";
+          dayDiv.textContent = day;
+          link.appendChild(dayDiv);
+
+          const content = document.createElement("div");
+          content.className = "calendar-content";
+
+          const timeDiv = document.createElement("div");
+          timeDiv.className = "calendar-time";
+          timeDiv.textContent = event.time;
+          content.appendChild(timeDiv);
+
+          const descDiv = document.createElement("div");
+          descDiv.className = "calendar-description";
+          descDiv.textContent = event.description;
+          content.appendChild(descDiv);
+
+          if (event.description2) {
+            const desc2Div = document.createElement("div");
+            desc2Div.className = "calendar-description";
+            desc2Div.textContent = event.description2;
+            content.appendChild(desc2Div);
+          }
+
+          link.appendChild(content);
+          col.appendChild(link);
+          eventsContainer.appendChild(col);
         });
       })
       .catch((error) => {
