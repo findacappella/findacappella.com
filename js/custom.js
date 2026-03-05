@@ -18,13 +18,12 @@
 
         // Filter out events that ended more than one week ago, then sort
         const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
         const oneWeekAgo = new Date(currentDate);
         oneWeekAgo.setDate(currentDate.getDate() - 7);
 
         const eventsWithDates = data.map((event) => {
-          const [m, d] = event.date.split("-").map((s) => parseInt(s, 10));
-          return { ...event, eventDate: new Date(currentYear, m - 1, d) };
+          const [y, m, d] = event.date.split("-").map((s) => parseInt(s, 10));
+          return { ...event, eventDate: new Date(y, m - 1, d) };
         });
 
         const upcomingEvents = eventsWithDates
