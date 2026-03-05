@@ -1,9 +1,6 @@
 
 /* custom.css - SEO & design refresh overrides */
 
-/* Chinese webfont for smoother glyph rendering */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap");
-
 /* Calendar Section Styles (clean, balanced cards) */
 .calendar-section {
     padding: 4.5rem 0 3rem;
