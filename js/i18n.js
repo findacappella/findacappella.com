@@ -507,7 +507,7 @@
   function detectInitialLanguage() {
     const saved = window.localStorage.getItem(LANG_KEY);
     if (saved) return resolveLang(saved);
-    const navLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    const navLang = (navigator.language || "").toLowerCase();
     if (navLang.startsWith("zh")) return "zh";
     return fallback;
   }
