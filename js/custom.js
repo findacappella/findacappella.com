@@ -97,11 +97,12 @@
     loadEvents();
   });
 
-  // NAVBAR
-  $(".navbar").headroom();
-
-  $(".navbar-collapse a").click(function () {
-    $(".navbar-collapse").collapse("hide");
+  // NAVBAR — bind after partials are injected so the navbar element exists
+  document.addEventListener("partials:loaded", function () {
+    $(".navbar").headroom();
+    $(".navbar-collapse a").click(function () {
+      $(".navbar-collapse").collapse("hide");
+    });
   });
 
   $(".slick-slideshow").slick({
@@ -109,11 +110,6 @@
     infinite: true,
     arrows: false,
     fade: true,
-    dots: true,
-  });
-
-  $(".slick-testimonial").slick({
-    arrows: false,
     dots: true,
   });
 })(window.jQuery);
