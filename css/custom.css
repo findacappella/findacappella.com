@@ -188,6 +188,7 @@ footer{ font-size:0.95rem; padding:2rem 0; background:#0f1720; color:#d1d5db;}
 
 /* Accessibility-friendly focus outlines */
 a:focus, button:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 3px; }
+.navbar-toggler:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 2px; }
 
 /* Language switcher: align with brand palette */
 .language-switcher .btn-group .btn{
@@ -357,7 +358,8 @@ html[lang^="zh"] .navbar-brand * {
   transform: translateY(-3px);
   box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.15);
-  outline: none;
+  outline: 3px solid rgba(59,130,246,0.25);
+  outline-offset: 3px;
 }
 .badge-soft {
   background-color: #f8f9fa;
