@@ -139,7 +139,7 @@
 :root{
     --base-font-size:16px;
     --heading-font-weight:700;
-    --body-font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --body-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     --primary-color: #ff7f50; /* coral/orange used across calendar accents */
     --dark-color: #0b1220; /* primary dark text color */
     --muted-color: #475569; /* soft muted text */
