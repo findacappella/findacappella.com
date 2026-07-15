@@ -2,6 +2,7 @@
   "use strict";
 
   function loadEvents() {
+    const t = (window.CMCA_I18N && window.CMCA_I18N.t) || (() => null);
     fetch("activities.json")
       .then((response) => {
         if (!response.ok) {
@@ -15,91 +16,108 @@
         // Clear any existing events
         eventsContainer.innerHTML = "";
 
-        // Filter out past events and sort upcoming events
+        // Filter out events that ended more than one week ago, then sort
         const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
+        const oneWeekAgo = new Date(currentDate);
+        oneWeekAgo.setDate(currentDate.getDate() - 7);
 
-        // Parse dates using numeric Date(...) to avoid timezone parsing issues ("YYYY-MM-DD" -> UTC shifts)
-        const upcomingEvents = data
-          .filter((event) => {
-            const [m, d] = event.date.split("-").map((s) => parseInt(s, 10));
-            let eventDate = new Date(currentYear, m - 1, d);
-            // If the event date has passed this year, consider next year
-            if (eventDate < currentDate) {
-              eventDate = new Date(currentYear + 1, m - 1, d);
-            }
-            return eventDate >= currentDate;
-          })
-          .sort((a, b) => {
-            const [ma, da] = a.date.split("-").map((s) => parseInt(s, 10));
-            const [mb, db] = b.date.split("-").map((s) => parseInt(s, 10));
-            let dateA = new Date(currentYear, ma - 1, da);
-            let dateB = new Date(currentYear, mb - 1, db);
-            if (dateA < currentDate) dateA = new Date(currentYear + 1, ma - 1, da);
-            if (dateB < currentDate) dateB = new Date(currentYear + 1, mb - 1, db);
-            return dateA - dateB;
-          });
+        const eventsWithDates = data.map((event) => {
+          const [y, m, d] = event.date.split("-").map((s) => parseInt(s, 10));
+          return { ...event, eventDate: new Date(y, m - 1, d) };
+        });
+
+        const upcomingEvents = eventsWithDates
+          .filter(({ eventDate }) => eventDate >= oneWeekAgo) // hide events that ended more than 7 days ago
+          .sort((a, b) => a.eventDate - b.eventDate);
 
         if (upcomingEvents.length === 0) {
-          eventsContainer.innerHTML = '<div class="col-12 text-center"><p>No upcoming events at this time. Check back soon!</p></div>';
+          eventsContainer.innerHTML = `<div class="col-12 text-center"><p data-i18n="home.events.empty">${t("home.events.empty") || "No upcoming events at this time. Check back soon!"}</p></div>`;
           return;
         }
 
         upcomingEvents.forEach((event) => {
-          const [month, day] = event.date.split("-").map((s) => parseInt(s, 10));
-          const monthName = new Date(2000, month - 1, 1).toLocaleString("default", { month: "short" }).toUpperCase();
+          const monthName = new Date(2000, event.eventDate.getMonth(), 1).toLocaleString("default", { month: "short" }).toUpperCase();
+          const day = event.eventDate.getDate();
+          const year = event.eventDate.getFullYear();
 
-          const description2 = event.description2 ? `<div class="calendar-description2 text-muted small">${event.description2}</div>` : "";
-          const eventCard = `
-            <div class="col-lg-4 col-md-6 col-12">
-              <a href="${event.url}" class="calendar-card">
-                <span class="calendar-accent" aria-hidden="true"></span>
-                <div class="calendar-month">${monthName}</div>
-                <div class="calendar-day">${parseInt(day)}</div>
-                <div class="calendar-content">
-                  <div class="calendar-time">${event.time}</div>
-                  <div class="calendar-description">${event.description}</div>
-                  ${description2}
-                </div>
-              </a>
-            </div>
-          `;
-          eventsContainer.insertAdjacentHTML("beforeend", eventCard);
+          const col = document.createElement("div");
+          col.className = "col-lg-4 col-md-6 col-12";
+
+          const link = document.createElement("a");
+          link.href = event.url;
+          link.className = "calendar-card";
+
+          const accent = document.createElement("span");
+          accent.className = "calendar-accent";
+          accent.setAttribute("aria-hidden", "true");
+          link.appendChild(accent);
+
+          const monthDiv = document.createElement("div");
+          monthDiv.className = "calendar-month";
+          monthDiv.textContent = monthName + " " + year;
+          link.appendChild(monthDiv);
+
+          const dayDiv = document.createElement("div");
+          dayDiv.className = "calendar-day";
+          dayDiv.textContent = day;
+          link.appendChild(dayDiv);
+
+          const content = document.createElement("div");
+          content.className = "calendar-content";
+
+          const timeDiv = document.createElement("div");
+          timeDiv.className = "calendar-time";
+          timeDiv.textContent = event.time;
+          content.appendChild(timeDiv);
+
+          const descDiv = document.createElement("div");
+          descDiv.className = "calendar-description";
+          descDiv.textContent = event.description;
+          content.appendChild(descDiv);
+
+          if (event.description2) {
+            const desc2Div = document.createElement("div");
+            desc2Div.className = "calendar-description";
+            desc2Div.textContent = event.description2;
+            content.appendChild(desc2Div);
+          }
+
+          link.appendChild(content);
+          col.appendChild(link);
+          eventsContainer.appendChild(col);
         });
       })
-      .catch((error) => console.error("Error loading events:", error));
+      .catch((error) => {
+        console.error("Error loading events:", error);
+        const eventsContainer = document.getElementById("events-container");
+        if (eventsContainer) {
+          eventsContainer.innerHTML = `<div class="col-12 text-center"><p class="text-muted" data-i18n="home.events.error">${t("home.events.error") || 'Unable to load events at this time. Please check back later or <a href="contact.html">contact us</a> for upcoming events.'}</p></div>`;
+        }
+      });
   }
+  window.CMCA_reloadEvents = loadEvents;
 
-  // PRE LOADER: ensure it hides even if injected after window 'load' (race with includes.js fetch)
+  // PRE LOADER: hide as soon as partials (navbar, footer, preloader) are injected
   $(document).ready(function () {
     // Load events for the calendar section
     loadEvents();
-    function tryHideOnce() {
-      const $pre = $(".preloader");
-      if ($pre.length) {
-        $pre.delay(500).fadeOut("slow");
-        return true;
-      }
-      return false;
-    }
-
-    $(window).on("load", function () {
-      if (tryHideOnce()) return;
-      // Retry briefly in case the preloader template is injected after the load event
-      var attempts = 100; // ~5s max (100 * 50ms)
-      var iv = setInterval(function () {
-        if (tryHideOnce() || --attempts <= 0) {
-          clearInterval(iv);
-        }
-      }, 50);
-    });
   });
 
-  // NAVBAR
-  $(".navbar").headroom();
+  document.addEventListener("partials:loaded", function () {
+    $(".preloader").delay(150).fadeOut(400);
+  });
 
-  $(".navbar-collapse a").click(function () {
-    $(".navbar-collapse").collapse("hide");
+  // Re-render events when language changes so inline text matches selection
+  document.addEventListener("i18n:languageChanged", function () {
+    loadEvents();
+  });
+
+  // NAVBAR — bind after partials are injected so the navbar element exists
+  document.addEventListener("partials:loaded", function () {
+    $(".navbar").headroom();
+    $(".navbar-collapse a").click(function () {
+      $(".navbar-collapse").collapse("hide");
+    });
   });
 
   $(".slick-slideshow").slick({
@@ -107,11 +125,6 @@
     infinite: true,
     arrows: false,
     fade: true,
-    dots: true,
-  });
-
-  $(".slick-testimonial").slick({
-    arrows: false,
     dots: true,
   });
 })(window.jQuery);

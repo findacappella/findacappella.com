@@ -136,7 +136,7 @@
 :root{
     --base-font-size:16px;
     --heading-font-weight:700;
-    --body-font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --body-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     --primary-color: #ff7f50; /* coral/orange used across calendar accents */
     --dark-color: #0b1220; /* primary dark text color */
     --muted-color: #475569; /* soft muted text */
@@ -188,3 +188,201 @@ footer{ font-size:0.95rem; padding:2rem 0; background:#0f1720; color:#d1d5db;}
 
 /* Accessibility-friendly focus outlines */
 a:focus, button:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 3px; }
+.navbar-toggler:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 2px; }
+
+/* Language switcher: align with brand palette */
+.language-switcher .btn-group .btn{
+  border-radius: 999px !important;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: #fff;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  line-height: 1.2;
+  min-width: 64px;
+}
+.language-switcher .btn-group .btn + .btn{
+  margin-left: 8px;
+}
+.language-switcher .btn-group .btn:hover,
+.language-switcher .btn-group .btn:focus{
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 6px 16px rgba(255, 127, 80, 0.2);
+}
+.language-switcher .btn-group .btn.active,
+.language-switcher .btn-group .btn[aria-pressed="true"]{
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 18px rgba(255, 127, 80, 0.28);
+}
+.language-switcher .small.text-muted{
+  color: #64748b !important;
+  font-weight: 600;
+}
+
+/* Chinese font stack for better legibility */
+html[lang^="zh"], body[lang^="zh"], :lang(zh){
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Heiti SC", "Source Han Sans SC", "Hiragino Sans GB", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Tone down letter spacing and tighten leading for dense Chinese copy */
+html[lang^="zh"] .slick-title,
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3,
+html[lang^="zh"] h4 {
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+html[lang^="zh"] .lead,
+html[lang^="zh"] p,
+html[lang^="zh"] li {
+  line-height: 1.7;
+}
+
+/* Keep hero CTA and chips balanced with wider Chinese text */
+html[lang^="zh"] .btn.custom-btn,
+html[lang^="zh"] .feature-chip {
+  white-space: nowrap;
+}
+
+/* Prevent navbar/hero text wrap for Chinese */
+@media (min-width: 768px){
+  html[lang^="zh"] .navbar-brand span,
+  html[lang^="zh"] .navbar .nav-link {
+    letter-spacing: 0;
+  }
+}
+
+/* Keep brand lockup styling consistent across languages */
+html[lang^="zh"] .navbar-brand,
+html[lang^="zh"] .navbar-brand * {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+/* Ensure the strong tag stays bold in both locales */
+.navbar-brand strong { font-weight: 700; }
+
+/* Mobile: align switcher inside navbar dropdown */
+@media (max-width: 991px){
+  .navbar .language-switcher{
+    width: 100%;
+    padding: 0.4rem 0.25rem 0.1rem;
+    justify-content: flex-start;
+  }
+  .navbar .language-switcher .btn-group{
+    width: 100%;
+  }
+  .navbar .language-switcher .btn-group .btn{
+    flex: 1 1 0;
+    text-align: center;
+  }
+}
+
+/* Shared component styles (consolidated from inline <style> blocks) */
+.card-elevate {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-elevate:hover,
+.card-elevate:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-light);
+  color: var(--bs-primary);
+}
+.feature-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover,
+.card-hover:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-up.revealed {
+  opacity: 1;
+  transform: none;
+}
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.action-card:hover,
+.action-card:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
+  outline: 3px solid rgba(59,130,246,0.25);
+  outline-offset: 3px;
+}
+.badge-soft {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+}
+.nav-pills .nav-link {
+  border-radius: 999px;
+}
+@media (min-width: 992px) {
+  .sticky-card {
+    position: sticky;
+    top: 6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-elevate,
+  .reveal,
+  .card-hover,
+  .fade-up,
+  .action-card {
+    transition: none !important;
+    transform: none !important;
+  }
+}
