@@ -106,8 +106,7 @@
   {
     "date": "2026-8-9",
     "time": "2:30PM - 5:30PM",
-    "description": "Mandarin A Cappella Workshop",
-    "description_zh": "阿卡贝拉体验社",
+    "description": "阿卡贝拉体验社",
     "description2_zh": "花香",
     "url": "https://gliss.live/classes/2f707c91-fcf0-4e2f-8b97-6effc75d4316"
   },
@@ -121,19 +120,15 @@
   {
     "date": "2026-9-26",
     "time": "7:30PM",
-    "description": "Find A Cappella 5th Anniversary Concert",
-    "description_zh": "拾乐团五周年专场音乐会",
+    "description": "拾乐团五周年专场音乐会",
     "description2": "五光拾色",
-    "description2_zh": "Pallet II",
     "url": "Coming Soon..."
   },
   {
     "date": "2026-10-11",
     "time": "3:00PM",
-    "description": "Sudo Choir Annual Concert",
-    "description_zh": "拾度合唱团年度音乐会",
+    "description": "拾度合唱团年度音乐会",
     "description2": "",
-    "description2_zh": "",
     "url": "Coming Soon..."
   }
 
