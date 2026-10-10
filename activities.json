@@ -118,6 +118,13 @@
     "url": "https://www.cityboxoffice.com/eventperformances.asp?evt=3332&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleATeCipwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp7KAbkwgD_-WWd87hY-cNAtNoEeZTbFmlMNoF2tBCVsm0lKqHESMxcJXQVdQ_aem_Wlbu9CW0crq51VFFD6Cttw"
   },
   {
+    "date": "2026-9-13",
+    "time": "2:30PM - 5:30PM",
+    "description": "阿卡贝拉体验社",
+    "description2_zh": "说爱你",
+    "url": "https://gliss.live/classes/afea175e-2d06-45f0-a96d-c543e90246ab"
+  }
+  {
     "date": "2026-9-26",
     "time": "8:00PM",
     "description": "Find & Shine - Find A Cappella 5-Year Concert",
@@ -128,8 +135,15 @@
     "date": "2026-10-11",
     "time": "4:00PM",
     "description": "Sudo Choir Annual Concert",
-    "description2": "",
+    "description2": "拾度合唱团两周年音乐会",
     "url": "https://luma.com/npeldzkc"
+  },
+  {
+    "date": "2026-10-18",
+    "time": "2:30PM - 5:30PM",
+    "description": "阿卡贝拉体验社",
+    "description2_zh": "需要人陪",
+    "url": "To be Announced..."
   }
 
 ]
